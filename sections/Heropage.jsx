@@ -1,16 +1,17 @@
 import React from 'react'
 import Image from 'next/image'
 
+import HeroImg from '../public/hero-img.jpeg'
+
 const Heropage = () => {
     return (
-        <div className='w-screen h-screen'>
-            <Image
-                src='/umb-hero-img.png'
-                width={2000}
-                height={2000}
+        <div className='w-full h-screen bg-black text-white'>
+            {/* <Image
+                src={HeroImg}
                 alt='Brand logo'
-                className='w-screen h-screen object-cover'
-            />
+                objectFit='cover'
+            /> */}
+            <p className='text-7xl'>he</p>
         </div>
     )
 }

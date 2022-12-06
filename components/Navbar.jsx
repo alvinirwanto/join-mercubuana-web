@@ -22,8 +22,8 @@ const Navbar = () => {
 
             <Image
                 src='/logo-umb-full.png'
-                width={shadowNav? 90 : 150}
-                height={shadowNav? 90 : 150}
+                width={shadowNav? 80 : 130}
+                height={shadowNav? 80 : 130}
                 className='duration-300'
             />
 

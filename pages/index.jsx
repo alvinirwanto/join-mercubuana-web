@@ -30,7 +30,7 @@ export default function Home() {
 
             <Navbar />
 
-            <main className='overflow-x-hidden'>
+            <main>
                 <Heropage />
                 <MengapaMemilihKK />
                 <UnduhBrosur />
