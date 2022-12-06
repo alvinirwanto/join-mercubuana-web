@@ -1,16 +1,27 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
 html,
 body {
   padding: 0;
   margin: 0;
+  /* height: 100vh; */
+  /* width: 100vw; */
 }
 
 * {
   box-sizing: border-box;
+}
+
+@layer components {
+  .primary-padding {
+    @apply px-[5rem] py-2;
+  }
+
+  input {
+    @apply outline-none border-b-2 border-primary-green py-2 focus:border-primary-blue duration-300;
+  }
 }
