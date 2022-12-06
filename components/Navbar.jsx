@@ -28,8 +28,6 @@ const Navbar = () => {
             />
 
 
-
-
             <div className='flex gap-[3rem] text-base font-medium'>
                 <div>
                     Home
