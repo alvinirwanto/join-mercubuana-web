@@ -10,7 +10,7 @@ const Navbar = () => {
     const [shadowNav, setShadowNav] = useState(false)
 
     const addShadowNav = () => {
-        window.scrollY >= 100 ? setShadowNav(true) : setShadowNav(false)
+        window.scrollY >= 80 ? setShadowNav(true) : setShadowNav(false)
     }
 
     useEffect(() => {
@@ -20,7 +20,7 @@ const Navbar = () => {
 
 
     return (
-        <div className={`${shadowNav ? 'shadow-md bg-white' : 'bg-transparent shadow-none'} w-full primary-padding flex justify-between items-center sticky top-0 z-[100]`}>
+        <div className={`${shadowNav ? 'shadow-md' : 'shadow-none'} bg-white w-full primary-padding flex justify-between items-center sticky top-0 z-[100]`}>
 
             <Image
                 src='/logo-umb-full.png'
@@ -47,7 +47,7 @@ const Navbar = () => {
                     FAQ
                 </div>
                 <button
-                    className='flex justify-center items-center gap-2 px-4 py-2 rounded-md hover:scale-[1.15] duration-200 bg-primary-blue text-white'
+                    className='flex justify-center items-center gap-2 px-4 py-2 rounded-sm duration-200 border-2 border-primary-blue text-primary-blue hover:bg-primary-blue hover:text-white'
                 >
                     <HiDownload />
                     <p>Unduh Brosur</p>
