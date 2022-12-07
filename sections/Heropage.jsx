@@ -8,7 +8,7 @@ const Heropage = () => {
     return (
         <div className='w-full h-[calc(100vh_-_7.5rem)]'>
             <div className='grid grid-cols-[1.3fr_1fr] gap-[5rem] h-full'>
-                <div className='flex flex-col gap-4 text-primary-blue justify-center pl-[5rem] overflow-hidden'>
+                <div className='flex flex-col gap-4 text-primary-blue justify-center pl-[5rem] overflow-hidden w-full relative'>
                     <Image
                         src={HeroBg}
                         alt='Brand logo'
