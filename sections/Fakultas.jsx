@@ -44,6 +44,7 @@ const Fakultas = () => {
                         <Image
                             src={FdskImg}
                             className='object-cover h-full w-full'
+                            alt='fdsk'
                         />
                         <div className={`flex items-end pb-6 px-8 absolute top-0 ${faculty === 'fdsk' ? 'bg-gradient-to-t from-primary-blue via-[#00000092] to-[#00000010]' : 'bg-[#000000a9]'} w-full h-full`}>
                             <h3 className={`text-white ${faculty === 'fdsk' ? 'text-2xl' : 'text-xl'} font-medium`}>Fakultas Desain & Seni Kreatif (FDSK)</h3>
@@ -61,6 +62,7 @@ const Fakultas = () => {
                         <Image
                             src={FasilkomImg}
                             className='object-cover h-full w-full'
+                            alt='fasilkom'
                         />
                         <div className={`flex items-end pb-6 px-8 absolute top-0 ${faculty === 'fasilkom' ? 'bg-gradient-to-t from-primary-blue via-[#00000092] to-[#00000010]' : 'bg-[#000000a9]'} w-full h-full`}>
                             <h3 className={`text-white ${faculty === 'fasilkom' ? 'text-2xl' : 'text-xl'} font-medium`}>Fakultas Ilmu Komputer (Fasilkom)</h3>
@@ -77,6 +79,7 @@ const Fakultas = () => {
                         ${faculty === 'fikom' ? 'h-[13rem] duration-500' : 'opacity-90 h-[7rem] hover:opacity-100'}`}>
                         <Image
                             src={FikomImg}
+                            alt='fikom'
                             className='object-cover h-full w-full'
                         />
                         <div className={`flex items-end pb-6 px-8 absolute top-0 ${faculty === 'fikom' ? 'bg-gradient-to-t from-primary-blue via-[#00000092] to-[#00000010]' : 'bg-[#000000a9]'} w-full h-full`}>
@@ -94,6 +97,7 @@ const Fakultas = () => {
                         ${faculty === 'ft' ? 'h-[13rem] duration-500' : 'opacity-90 h-[7rem] hover:opacity-100'}`}>
                         <Image
                             src={FtImg}
+                            alt='ft'
                             className='object-cover h-full w-full'
                         />
                         <div className={`flex items-end pb-6 px-8 absolute top-0 ${faculty === 'ft' ? 'bg-gradient-to-t from-primary-blue via-[#00000092] to-[#00000010]' : 'bg-[#000000a9]'} w-full h-full`}>
@@ -111,6 +115,7 @@ const Fakultas = () => {
                         ${faculty === 'feb' ? 'h-[13rem] duration-500' : 'opacity-90 h-[7rem] hover:opacity-100'}`}>
                         <Image
                             src={FebImg}
+                            alt='feb'
                             className='object-cover h-full w-full'
                         />
                         <div className={`flex items-end pb-6 px-8 absolute top-0 ${faculty === 'feb' ? 'bg-gradient-to-t from-primary-blue via-[#00000092] to-[#00000010]' : 'bg-[#000000a9]'} w-full h-full`}>
@@ -128,6 +133,7 @@ const Fakultas = () => {
                         ${faculty === 'fpsi' ? 'h-[13rem] duration-500' : 'opacity-90 h-[7rem] hover:opacity-100'}`}>
                         <Image
                             src={FpsiImg}
+                            alt='fpsi'
                             className='object-cover h-full w-full'
                         />
                         <div className={`flex items-end pb-6 px-8 absolute top-0 ${faculty === 'fpsi' ? 'bg-gradient-to-t from-primary-blue via-[#00000092] to-[#00000010]' : 'bg-[#000000a9]'} w-full h-full`}>

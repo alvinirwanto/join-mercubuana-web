@@ -11,6 +11,7 @@ const UnduhBrosur = () => {
             <div className="relative rounded-sm overflow-clip" >
                 <Image
                     src={BgUnduhBrosur}
+                    alt='background brosur'
                     className='h-full w-full object-cover'
                 />
                 <div className="bg-gradient-to-l from-[#00326f] to-[#00326f21] absolute top-0 h-full w-full grid grid-cols-2">

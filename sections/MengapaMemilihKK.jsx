@@ -20,21 +20,21 @@ const MengapaMemilihKK = () => {
             />
             <div className="px-[5rem] pt-[5rem] grid grid-cols-3">
                 <div className="grid grid-cols-[1fr_5fr] gap-4 p-4">
-                    <Image src={IconAkreditasi} className="w-[5rem] aspect-square self-start" alt="" />
+                    <Image src={IconAkreditasi} className="w-[5rem] aspect-square self-start" alt="icon" />
                     <div className="flex flex-col gap-4 mt-2">
                         <h2 className="font-semibold text-xl text-primary-blue">Terakreditasi BAN-PT</h2>
                         <p>Seluruh program studi unggulan di kelas karyawan Universitas Mercu Buana telah terakreditasi BAN-PT</p>
                     </div>
                 </div>
                 <div className="grid grid-cols-[1fr_5fr] gap-4 p-4">
-                    <Image src={IconBill} className="w-[4rem] aspect-square self-start" alt="" />
+                    <Image src={IconBill} className="w-[4rem] aspect-square self-start" alt="icon" />
                     <div className="flex flex-col gap-4 mt-2">
                         <h2 className="font-semibold text-xl text-primary-blue">Biaya Kuliah Sesuai Kualitas</h2>
                         <p>Biaya perkuliahan sesuai dengan kualitas yang dirancang sama dengan program reguler dengan kemudahan skema pembayaran yang mudah</p>
                     </div>
                 </div>
                 <div className="grid grid-cols-[1fr_5fr] gap-4 p-4">
-                    <Image src={IconHour} className="w-[4rem] aspect-square self-start" alt="" />
+                    <Image src={IconHour} className="w-[4rem] aspect-square self-start" alt="icon" />
                     <div className="flex flex-col gap-4 mt-2">
                         <h2 className="font-semibold text-xl text-primary-blue">Waktu Kuliah Fleksibel</h2>
                         <p>Di kelas karyawan, Anda dapat memilih waktu kuliah yang dapat disesuaikan dengan pekerjaan Anda</p>

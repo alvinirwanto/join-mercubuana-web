@@ -10,6 +10,7 @@ const ProdiItem = ({ title, content, image, imgPosition }) => {
             </div>
             <Image
                 src={image}
+                alt='foto'
                 className={`object-cover h-full w-full rounded-sm order-1 ${imgPosition === 'right' ? 'order-2' : 'order-1'}`}
             />
         </div>
