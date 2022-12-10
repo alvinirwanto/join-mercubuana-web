@@ -20,7 +20,7 @@ const Navbar = () => {
 
 
     return (
-        <div className={`${shadowNav ? 'shadow-md' : 'shadow-none'} bg-white w-full primary-padding flex justify-between items-center sticky top-0 z-[100]`}>
+        <div className={`${shadowNav ? 'shadow-md' : 'shadow-none'} bg-white w-full primary-padding hidden xl:flex justify-between items-center sticky top-0 z-[100]`}>
 
             <Image
                 src='/logo-umb-full.png'

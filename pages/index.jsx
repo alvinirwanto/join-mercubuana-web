@@ -17,6 +17,7 @@ import FAQ from "../sections/FAQ";
 import Footer from "../components/Footer";
 import Heropage from "../sections/Heropage";
 import MengapaMemilihUMB from "../sections/MengapaMemilihUMB";
+import Fakultas from "../sections/Fakultas";
 
 export default function Home() {
   return (
@@ -37,12 +38,7 @@ export default function Home() {
         <Heropage />
         <MengapaMemilihKK />
         <UnduhBrosur />
-        <FDSK />
-        <Fasilkom />
-        <FEB />
-        <Fikom />
-        <FPsi />
-        <FT />
+        <Fakultas/>
         <TentangUMB />
         <MengapaMemilihUMB />
         <AlurPenerimaan />
