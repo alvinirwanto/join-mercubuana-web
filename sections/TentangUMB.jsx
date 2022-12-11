@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import mercu from "../public/Kelas-karyawan.webp";
 import CampusImg2 from '../public/campus-2.jpeg'
 import Image from "next/image";
@@ -6,9 +6,12 @@ import Image from "next/image";
 import TitleSection from "../components/TitleSection";
 
 import { BsPlayCircleFill } from 'react-icons/bs'
+import { BiX } from 'react-icons/bi'
 
 
 const TentangUMB = () => {
+    const [showVideo, setShowVideo] = useState(false)
+
     return (
         <div className="w-full primary-padding">
             <TitleSection
@@ -18,7 +21,9 @@ const TentangUMB = () => {
 
             <div className="mt-[5rem] relative">
                 <Image
-                    src={CampusImg2}
+                    src='/campus-2.jpeg'
+                    width={2000}
+                    height={2000}
                     alt='campus'
                     className='w-full h-[90vh] object-cover'
                 />
@@ -30,7 +35,7 @@ const TentangUMB = () => {
                     </div>
 
                     <div
-                        // onClick={ }
+                        onClick={() => { setShowVideo(true) }}
                         className="flex flex-col items-center justify-center gap-4 text-black relative cursor-pointer"
                     >
                         <BsPlayCircleFill className="text-6xl absolute top-0 w-full h-full" />
@@ -40,15 +45,27 @@ const TentangUMB = () => {
                 </div>
             </div>
 
+            <div className={showVideo
+                ? "bg-[#000000d2] fixed flex justify-center items-center z-[100] top-0 left-0 w-full h-screen"
+                : "hidden"}>
+                <div className="flex items-start gap-4 w-[70%]">
+                    <iframe
+                        className="w-full aspect-video"
+                        src={showVideo? "https://www.youtube.com/embed/-_sIStXUSBw?autoplay=1" : ""}
+                        allow='autoplay'
+                        title="YouTube video player"
+                    />
+                    <div
+                        onClick={() => { setShowVideo(false) }}
+                        className="text-white cursor-pointer p-0">
+                        <BiX className="text-4xl" />
+                    </div>
+                </div>
+            </div>
+
             <div className="grid grid-cols-2 gap-8 mt-9">
                 <div className="">
-                    <iframe
-                        className="w-full h-full"
-                        src="https://www.youtube.com/embed/-_sIStXUSBw"
-                        title="YouTube video player"
-                    // frameborder="0"
-                    // allowfullscreen='true'
-                    ></iframe>
+
                 </div>
                 <div className="bg-white-500">
                     <div className="font-bold">
