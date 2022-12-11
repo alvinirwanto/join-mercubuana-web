@@ -38,7 +38,7 @@ export default function Home() {
         <Heropage />
         <MengapaMemilihKK />
         <UnduhBrosur />
-        <Fakultas/>
+        {/* <Fakultas/> */}
         <TentangUMB />
         <MengapaMemilihUMB />
         <AlurPenerimaan />

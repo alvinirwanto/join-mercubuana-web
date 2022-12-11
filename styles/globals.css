@@ -8,7 +8,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   /* height: 100vh; */
   /* width: 100vw; */
 }
@@ -17,9 +17,19 @@ body {
   box-sizing: border-box;
 }
 
+.swiper-pagination-bullet {
+    background-color: transparent !important;
+  border: 1px solid rgba(255, 255, 255, 0.568);
+  opacity: 1 !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #fff !important;
+}
+
 @layer components {
   .primary-padding {
-    @apply px-[5rem] py-2;
+    @apply px-2 md:px-4 xl:px-[5rem] py-2;
   }
 
   input {
@@ -27,6 +37,6 @@ body {
   }
 
   label {
-    @apply font-bold text-secondary-blue
+    @apply font-bold text-secondary-blue;
   }
 }

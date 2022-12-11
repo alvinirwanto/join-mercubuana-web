@@ -16,18 +16,18 @@ const listOfReason = [
 const MengapaMemilihUMB = () => {
     return (
         <div className="primary-padding">
-            <div className="relative">
+            <div className="relative h-[200vh] md:h-[100vh] xl:h-full">
                 <Image
                     src={campusImg}
                     className='w-full object-cover'
                 />
 
-                <div className="h-full w-full z-50 absolute top-0 bg-gradient-to-b from-primary-blue via-[#00000076] to-[#000000aa] text-white p-[5rem] flex flex-col gap-[3rem] justify-center">
+                <div className="h-full w-full z-50 absolute top-0 bg-gradient-to-b from-primary-blue via-[#00000076] to-[#000000aa] text-white p-[3rem] xl:p-[5rem] flex flex-col gap-[3rem] justify-center">
                     <div className="max-w-[700px]">
                         <h4 className="text-4xl font-semibold">Mengapa Memilih Kelas Karyawan Universitas Mercu Buana Sebagai Tempat Kuliah yang Tepat dan Terbaik?</h4>
                     </div>
 
-                    <div className="grid grid-cols-3 gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
                         {
                             listOfReason.map((item, index) => (
                                 <div key={index} className="p-8 backdrop-blur border-2 border-[#ffffff9c] text-white flex flex-col justify-center gap-6 items-center">

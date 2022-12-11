@@ -6,7 +6,7 @@ import HeroImg from '../public/student.png'
 
 const Heropage = () => {
     return (
-        <div className='w-full md:h-[calc(100vh_-_7.5rem)] overflow-hidden'>
+        <div className='w-full md:h-[calc(100vh_-_7.5rem)] overflow-hidden primary-padding'>
             <div className='grid grid-cols-1 md:grid-cols-[1.3fr_1fr] md:gap-4 xl:gap-[5rem] h-full px-4'>
                 <div className='flex flex-col gap-4 text-primary-blue justify-center xl:pl-[5rem] md:overflow-hidden w-full h-full relative'>
                     <Image
