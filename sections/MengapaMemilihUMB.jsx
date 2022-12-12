@@ -16,7 +16,7 @@ const listOfReason = [
 const MengapaMemilihUMB = () => {
     return (
         <div className="primary-padding">
-            <div className="relative h-[200vh] md:h-[100vh] xl:h-full">
+            <div className="relative h-[200vh] md:h-[100vh] xl:h-full rounded-sm overflow-clip">
                 <Image
                     src={campusImg}
                     className='w-full object-cover'
