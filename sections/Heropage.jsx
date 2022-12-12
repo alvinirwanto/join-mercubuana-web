@@ -38,7 +38,7 @@ const Heropage = () => {
                         <h2 className='text-4xl font-bold text-primary-blue'>Daftar Sekarang Juga!</h2>
                     </div>
 
-                    <div className='bg-white xl:mr-[6rem] flex flex-col justify-center gap-4'>
+                    <div className='bg-white flex flex-col justify-center gap-4'>
                         <p className='font-medium text-base text-secondary-blue'>
                             Isi Data Diri Anda Di sini dan Dapatkan Gratis Biaya Formulir Pendaftaran Hingga Potongan Biaya Kuliah Jutaan Rupiah
                         </p>
@@ -47,7 +47,7 @@ const Heropage = () => {
                             <input type="text" placeholder='Nama Lengkap' />
                             <input type="text" placeholder='E-mail' />
                             <input type="text" placeholder='No. Hp' />
-                            <button className='bg-primary-blue text-white py-3 px-[4rem] rounded-sm'>Kirim</button>
+                            <button className='xl:self-start bg-primary-blue text-white py-3 px-[4rem] rounded-sm'>Kirim</button>
 
                         </form>
                     </div>
