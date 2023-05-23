@@ -18,7 +18,7 @@ const MengapaMemilihKK = () => {
                 subtitle='Mengapa Memilih Kelas Karyawan'
                 title='Universitas Mercu Buana'
             />
-            <div className="primary-padding pt-[5rem] grid grid-cols-1 md:grid-cols-3">
+            <div className="primary-padding pt-[5rem] grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
                 <div className="grid grid-cols-[1fr_5fr] gap-4 p-4">
                     <Image src={IconAkreditasi} className="w-[5rem] aspect-square self-start" alt="icon" />
                     <div className="flex flex-col gap-4 mt-2">

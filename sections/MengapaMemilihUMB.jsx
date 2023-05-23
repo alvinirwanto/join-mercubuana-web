@@ -15,14 +15,14 @@ const listOfReason = [
 
 const MengapaMemilihUMB = () => {
     return (
-        <div className="primary-padding">
+        <div className="primary-padding mt-[5rem]">
             <div className="relative h-[200vh] md:h-[100vh] xl:h-full rounded-sm overflow-clip">
                 <Image
                     src={campusImg}
                     className='w-full object-cover'
                 />
 
-                <div className="h-full w-full z-50 absolute top-0 bg-gradient-to-b from-primary-blue via-[#00000076] to-[#000000aa] text-white p-[3rem] xl:p-[5rem] flex flex-col gap-[3rem] justify-center">
+                <div className="h-full w-full z-50 absolute top-0 bg-gradient-to-b from-[#000000bc] via-[#00000076] to-[#000000aa] text-white p-[3rem] xl:p-[5rem] flex flex-col gap-[3rem] justify-center">
                     <div className="max-w-[700px]">
                         <h4 className="text-4xl font-semibold">Mengapa Memilih Kelas Karyawan Universitas Mercu Buana Sebagai Tempat Kuliah yang Tepat dan Terbaik?</h4>
                     </div>
@@ -30,8 +30,8 @@ const MengapaMemilihUMB = () => {
                     <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
                         {
                             listOfReason.map((item, index) => (
-                                <div key={index} className="p-8 backdrop-blur border-2 border-[#ffffff9c] text-white flex flex-col justify-center gap-6 items-center">
-                                    <p className="text-xl text-center">{item.reason}</p>
+                                <div key={index} className="p-8 rounded-md text-black bg-white flex flex-col justify-center gap-6 items-center">
+                                    <p className="text-lg text-center">{item.reason}</p>
                                 </div>
                             ))
                         }

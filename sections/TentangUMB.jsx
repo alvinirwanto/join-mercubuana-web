@@ -1,24 +1,61 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import mercu from "../public/Kelas-karyawan.webp";
 import CampusImg2 from '../public/campus-2.jpeg'
 import Image from "next/image";
 
+// Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 
 // import required modules
-import { Pagination } from "swiper";
+import { Pagination, Navigation } from "swiper";
 
 import TitleSection from "../components/TitleSection";
 
 import { BsPlayCircleFill } from 'react-icons/bs'
 import { BiX } from 'react-icons/bi'
+import { RiArrowLeftSLine, RiArrowRightSLine } from "react-icons/ri";
+
+
+const images = [
+    {
+        id: '1',
+        link: '/campus-2.jpeg'
+    },
+    {
+        id: '2',
+        link: '/fdsk.jpeg'
+    },
+    {
+        id: '3',
+        link: '/ft.jpeg'
+    }
+]
 
 
 const TentangUMB = () => {
     const [showVideo, setShowVideo] = useState(false)
 
+    const [realSlide, setRealSlide] = useState(0)
+    const swiper = useRef()
+
+    const fnPrev = React.useCallback(
+        () => {
+            // Optional Chaining
+            if (realSlide > 0) swiper?.current?.slidePrev()
+        },
+        [swiper, realSlide]
+    )
+
+    const fnNext = React.useCallback(
+        () => {
+            if (realSlide < images.length) swiper?.current?.slideNext()
+        },
+        [swiper, realSlide]
+    )
     return (
         <div className="w-full primary-padding mt-[5rem]">
             <TitleSection
@@ -40,7 +77,7 @@ const TentangUMB = () => {
                         <h2 className="text-4xl font-semibold">
                             Universitas Mercu Buana, <br /> Pilihan Terbaik PTS di Indonesia
                         </h2>
-                        <p className="">Universitas Mercu Buana merupakan salah satu perguruan tinggi swasta terbaik di Indonesia yang telah terakreditasi BAN PT. UMB memiliki program studi unggulan yang siap mengantarkan mahasiswa menjadi tenaga profesional yang andal. Universitas Mercu Buana hadir sebagai universitas swasta terbaik dengan biaya yang sesuai dengan kualitas dan menyediakan berbagai program kelas karyawan untuk para tenaga profesional yang ingin melanjutkan pendidikan ke jenjang yang lebih tinggi.</p>
+                        <p className="text-lg">Universitas Mercu Buana merupakan salah satu perguruan tinggi swasta terbaik di Indonesia yang telah terakreditasi BAN PT. UMB memiliki program studi unggulan yang siap mengantarkan mahasiswa menjadi tenaga profesional yang andal. Universitas Mercu Buana hadir sebagai universitas swasta terbaik dengan biaya yang sesuai dengan kualitas dan menyediakan berbagai program kelas karyawan untuk para tenaga profesional yang ingin melanjutkan pendidikan ke jenjang yang lebih tinggi.</p>
                     </div>
 
                     <div
@@ -72,7 +109,7 @@ const TentangUMB = () => {
                 </div>
             </div>
 
-            <div className="grid grid-cols-1 xl:grid-cols-[1.5fr_2fr] gap-8 mt-[3rem] p-6 md:p-[3rem] border-[1px] border-gray-300 rounded-sm overflow-clip">
+            <div className="grid grid-cols-1 xl:grid-cols-[1.5fr_2fr] gap-8 mt-[3rem] px-3 py-8 md:p-[3rem] border-[1px] border-gray-300 rounded-sm overflow-clip">
                 <div className="flex flex-col gap-[3rem] order-2 xl:order-1">
                     <div className="flex flex-col gap-4">
                         <h2 className="font-semibold text-2xl">Fasilitas Kampus</h2>
@@ -84,53 +121,62 @@ const TentangUMB = () => {
                         <p>Lokasi Universitas Mercu Buana berada di tiga area yaitu kampus Meruya Jakarta Barat, Kampus Menteng Jakarta Pusat, Kampus Warung Buncit Jakarta Selatan. </p>
                     </div>
                 </div>
+
                 <Swiper
-                    slidesPerView={2}
+                    slidesPerView={1}
                     // centeredSlides={true}
-                    spaceBetween={190}
+                    spaceBetween={15}
                     grabCursor={true}
-                    pagination={{
-                        clickable: true,
+                    breakpoints={{
+                        480: {
+                            slidesPerView: 2,
+                        }
                     }}
+                    onSlideChange={(s) => setRealSlide(s.realIndex)}
+                    onSwiper={(s) => {
+                        swiper.current = s
+                    }}
+                    // navigation={true}
                     modules={[Pagination]}
-                    className='w-full order-1 xl:order-2'
+                    className="w-full order-1 xl:order-2"
                 >
-                    <SwiperSlide>
-                        <div className="bg-black w-[25rem] h-full">
-                            <Image
-                                src='/campus-2.jpeg'
-                                width={2000}
-                                height={2000}
-                                alt='campus'
-                                className="object-cover h-full w-full"
-                            />
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className="bg-black w-[25rem] h-full">
-                            <Image
-                                src='/campus-2.jpeg'
-                                width={2000}
-                                height={2000}
-                                alt='campus'
-                                className="object-cover h-full w-full"
-                            />
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className="bg-black w-[25rem] h-full">
-                            <Image
-                                src='/campus-2.jpeg'
-                                width={2000}
-                                height={2000}
-                                alt='campus'
-                                className="object-cover h-full w-full"
-                            />
-                        </div>
-                    </SwiperSlide>
+                    {
+                        images.map((img) => (
+                            <SwiperSlide key={img.id}>
+                                <Image
+                                    src={img.link}
+                                    width={500}
+                                    height={500}
+                                    alt='campus'
+                                    className="object-cover h-full w-[25rem]"
+                                />
+                            </SwiperSlide>
+                        ))
+                    }
                 </Swiper>
+
+                <div></div>
+
+                {/* ===== Navigation ====== */}
+                <div className={`flex justify-end w-full gap-2 z-50`}>
+                    <button
+                        onClick={fnPrev}
+                        className={`bg-black p-2 rounded-full shadow-lg ml-4 text-white`}
+                    >
+                        <RiArrowLeftSLine className='text-2xl' />
+                    </button>
+
+                    <button
+                        onClick={fnNext}
+                        className={`bg-black p-2 rounded-full shadow-lg mr-2 text-white`}
+                    >
+                        <RiArrowRightSLine className='text-2xl' />
+                    </button>
+                </div>
             </div>
-        </div>
+
+
+        </div >
     );
 };
 

@@ -8,16 +8,16 @@ import BgUnduhBrosur from '../public/unduh-brosur.jpeg'
 const UnduhBrosur = () => {
     return (
         <div className="primary-padding">
-            <div className="relative rounded-sm overflow-clip" >
+            <div className="relative rounded-lg overflow-clip" >
                 <Image
                     src={BgUnduhBrosur}
                     alt='background brosur'
-                    className='h-[70vh] md:h-full w-full object-cover'
+                    className='h-[70vh] xl:h-[90vh] w-full object-cover'
                 />
-                <div className="bg-gradient-to-t md:bg-gradient-to-l from-[#00326f] to-[#00326f21] absolute top-0 h-full w-full grid grid-cols-1 md:grid-cols-2">
+                <div className="bg-gradient-to-t md:bg-gradient-to-l from-[#00326f] to-[#00326f21] absolute top-0 h-full w-full grid grid-cols-1 md:grid-cols-[1fr_1.5fr] xl:grid-cols-2">
                     <div></div>
                     <div className="self-center px-[3rem] flex flex-col gap-6 items-start">
-                        <h2 className="text-white text-2xl md:text-xl xl:text-3xl font-semibold">
+                        <h2 className="text-white text-2xl md:text-xl xl:text-3xl xl:font-semibold">
                             Ingin Dapatkan Informasi Lebih Lengkap Tentang Kelas Karyawan
                             Universitas Mercu Buana?
                         </h2>

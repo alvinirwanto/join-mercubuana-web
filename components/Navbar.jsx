@@ -20,10 +20,10 @@ const Navbar = () => {
 
 
     return (
-        <div className={`${shadowNav ? 'shadow-md' : 'shadow-none'} bg-white w-full primary-padding hidden xl:flex justify-between items-center sticky top-0 z-[100]`}>
+        <nav className={`${shadowNav ? 'shadow-md bg-white duration-300' : 'shadow-none bg-transparent duration-300'} duration-300 w-full primary-padding hidden xl:flex justify-between items-center fixed top-0 z-[100]`}>
 
             <Image
-                src='/logo-umb-full.png'
+                src={shadowNav? '/logo/logo-umb-full.png' : '/logo/logo-umb-white.png'}
                 alt='logo'
                 width={shadowNav ? 80 : 120}
                 height={shadowNav ? 80 : 120}
@@ -31,7 +31,7 @@ const Navbar = () => {
             />
 
 
-            <div className='flex justify-center items-center gap-[3rem] text-base font-medium text-primary-blue'>
+            <div className={`flex justify-center items-center gap-[3rem] text-base font-medium ${shadowNav ? 'text-primary-blue' : 'text-white'}`}>
                 <div>
                     Home
                 </div>
@@ -48,13 +48,13 @@ const Navbar = () => {
                     FAQ
                 </div>
                 <button
-                    className='flex justify-center items-center gap-2 px-4 py-2 rounded-sm duration-200 border-2 border-primary-blue text-primary-blue hover:bg-primary-blue hover:text-white'
+                    className={`flex justify-center items-center gap-2 px-4 py-2 rounded-md duration-200 border-2 ${shadowNav? 'border-primary-blue text-primary-blue hover:bg-primary-blue hover:text-white' : 'border-white text-white hover:bg-white hover:text-primary-blue'} `}
                 >
                     <HiDownload />
                     <p>Unduh Brosur</p>
                 </button>
             </div>
-        </div>
+        </nav>
     )
 }
 

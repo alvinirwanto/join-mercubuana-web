@@ -4,56 +4,84 @@ import Image from 'next/image'
 import HeroBg from '../public/umb.png'
 import HeroImg from '../public/student.png'
 
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/effect-fade";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+
+
+import { Pagination, Autoplay } from "swiper";
+
+const items = [
+    {
+        id: 1,
+        image: 'hero-1.jpg'
+    },
+    {
+        id: 2,
+        image: 'hero-2.jpg'
+    },
+    {
+        id: 3,
+        image: 'hero-3.jpg'
+    },
+]
+
 const Heropage = () => {
     return (
-        <div className='w-full md:h-[calc(100vh_-_7.5rem)] overflow-hidden primary-padding'>
-            <div className='grid grid-cols-1 md:grid-cols-[1.3fr_1fr] md:gap-4 xl:gap-[5rem] h-full px-4'>
-                <div className='flex flex-col gap-4 text-primary-blue justify-center xl:pl-[5rem] md:overflow-hidden w-full h-full relative'>
-                    <Image
-                        src={HeroBg}
-                        alt='Brand logo'
-                        className='object-contain h-full w-[90%] md:w-full opacity-50'
-                    />
+        <div className='w-full h-[100vh] md:h-screen bg-blue-200'>
+            <Swiper
+                slidesPerView={1}
+                spaceBetween={30}
+                loop={true}
+                pagination={{
+                    clickable: true,
+                }}
+                autoplay={{
+                    delay: 3500,
+                    disableOnInteraction: false,
+                }}
+                modules={[Autoplay, Pagination]}
+                className="mySwiper h-full w-full relative z-[-2]"
+            >
+                {
+                    items.map((item, id) => (
+                        <SwiperSlide key={id}>
+                            <img src={`/hero/${item.image}`} alt="image" className="object-cover w-full h-full" />
+                        </SwiperSlide>
+                    ))
+                }
 
-                    {/* Mobile */}
-                    <Image
-                        src='/student.png'
-                        width={500}
-                        height={500}
-                        alt='Brand logo'
-                        className='object-contain h-full w-full md:hidden absolute'
-                    />
+                <div className='absolute top-0 right-0 w-full h-[80%] bg-gradient-to-b from-[#0000007e] to-transparent z-[10]'></div>
 
-                    <Image
-                        src={HeroImg}
-                        alt='image'
-                        sizes="100%"
-                        className='object-contain px-[3rem] hidden md:block md:absolute '
-                    />
+                <div className='absolute bottom-[3rem] right-2.5 md:right-10 xl:top-[8rem] xl:right-[5rem] max-w-[95vw] md:max-w-[70vw] xl:max-w-[38vw] z-[20]'>
+                    <div className='border-[1px] shadow-md rounded-lg p-[3rem] bg-white flex flex-col gap-8'>
+                        <div>
+                            <h1 className='text-lg md:text-xl font-medium text-primary-green'>Tingkatkan Karirmu Bersama <br /> Kelas Karyawan UMB</h1>
+                            <h2 className='text-4xl md:text-5xl mt-2 font-bold text-primary-blue'>Daftar Sekarang Juga!</h2>
+                        </div>
+
+                        <div className='bg-white flex flex-col justify-center gap-4'>
+                            <p className='font-medium text-base text-secondary-blue'>
+                                Isi Data Diri Kamu Disini dan Dapatkan Informasi serta Penawaran Menarik Lainnya
+                            </p>
+                            <iframe
+                                height="850"
+                                className='max-h-[20rem]'
+                                src="https://omni.mercubuana.ac.id/crm-mx/crm-app/forms/wtl/77e6c3eac6ff3a5bf2b9ae14c5a4872c"
+                                frameborder="0"
+                                sandbox="allow-top-navigation allow-scripts allow-forms allow-same-origin"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
                 </div>
 
-                <div className='bg-blue w-full h-full xl:px-8 xl:pr-[5rem] flex flex-col gap-8 justify-center'>
-                    <div>
-                        <h1 className='text-lg font-medium text-primary-green'>Tingkatkan Karirmu Bersama <br /> Kelas Karyawan UMB</h1>
-                        <h2 className='text-4xl font-bold text-primary-blue'>Daftar Sekarang Juga!</h2>
-                    </div>
+            </Swiper>
 
-                    <div className='bg-white flex flex-col justify-center gap-4'>
-                        <p className='font-medium text-base text-secondary-blue'>
-                            Isi Data Diri Anda Di sini dan Dapatkan Gratis Biaya Formulir Pendaftaran Hingga Potongan Biaya Kuliah Jutaan Rupiah
-                        </p>
-                        <form className='flex flex-col justify-center gap-5 bg-[#00326f06] border-2 border-[#00326f0b] px-6 py-8 rounded-sm'>
-
-                            <input type="text" placeholder='Nama Lengkap' />
-                            <input type="text" placeholder='E-mail' />
-                            <input type="text" placeholder='No. Hp' />
-                            <button className='xl:self-start bg-primary-blue text-white py-3 px-[4rem] rounded-sm'>Kirim</button>
-
-                        </form>
-                    </div>
-                </div>
-
-            </div>
         </div>
     )
 }
