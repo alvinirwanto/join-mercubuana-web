@@ -56,7 +56,7 @@ const Fakultas = () => {
                                         {
                                             faculty.majors.map((major, i) => (
                                                 <div key={i} className='p-4 md:p-8 border-[1px] border-gray-300 rounded-lg flex flex-col gap-6'>
-                                                    <h3 className='rounded text-2xl md:text-3xl font-semibold bg-[#00326f08] border-2 border-[#00326f10] text-primary-blue py-2 px-4 self-start'>{major.name}</h3>
+                                                    <h3 className='rounded text-2xl font-semibold bg-[#00326f08] border-2 border-[#00326f10] text-primary-blue py-2 px-4 self-start'>{major.name}</h3>
                                                     <p className='text-justify text-lg'>{major.content}</p>
                                                 </div>
                                             ))

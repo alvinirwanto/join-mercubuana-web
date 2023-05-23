@@ -58,10 +58,10 @@ const Heropage = () => {
                 <div className='absolute top-0 right-0 w-full h-[80%] bg-gradient-to-b from-[#0000007e] to-transparent z-[10]'></div>
 
                 <div className='absolute bottom-[3rem] right-2.5 md:right-10 xl:top-[8rem] xl:right-[5rem] max-w-[95vw] md:max-w-[70vw] xl:max-w-[38vw] z-[20]'>
-                    <div className='border-[1px] shadow-md rounded-lg p-[3rem] bg-white flex flex-col gap-8'>
+                    <div className='border-[1px] shadow-md rounded-lg p-[3rem] bg-white flex flex-col gap-4'>
                         <div>
                             <h1 className='text-lg md:text-xl font-medium text-primary-green'>Tingkatkan Karirmu Bersama <br /> Kelas Karyawan UMB</h1>
-                            <h2 className='text-4xl md:text-5xl mt-2 font-bold text-primary-blue'>Daftar Sekarang Juga!</h2>
+                            <h2 className='text-4xl mt-2 font-bold text-primary-blue'>Daftar Sekarang Juga!</h2>
                         </div>
 
                         <div className='bg-white flex flex-col justify-center gap-4'>

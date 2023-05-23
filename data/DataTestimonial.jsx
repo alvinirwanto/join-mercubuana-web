@@ -1,31 +1,21 @@
-import Image1 from '../public/testimonial1.png'
-import Image2 from '../public/testimonial2.png'
-import Image3 from '../public/testimonial3.png'
-
-export const Data = [
+export const testimonial = [
     {
         id: 1,
-        image: Image1,
-        title: 'John Doe',
-        description: 'A really good job, all aspects of the project were followed step by step and with good result'
+        image: '/testimoni/1.webp',
+        name: 'Farroszy Safana P (Teknik Sipil UMB - Juara 3 TAEKWONDO Black Tiger AAU-Poomsae Tunggal Senior Putra)',
+        description: '“Rasa bangga menjadi Mahasiswa Universitas Mercu Buana akan terus tertanam sebab Universitas selalu mengapresiasi bakat & minat mahasiswanya. Sahabat Muda segera bergabung dan berkarya bersama yuk."'
     },
     {
         id: 2,
-        image: Image2,
-        title: 'Ria Busana',
-        description: 'A really good job, all aspects of the project were followed step by step and with good result'
+        image: '/testimoni/2.webp',
+        name: 'Farhan Arrazi (Broadcasting - Juara 3 Abang None Buku Tingkat DKI Jakarta)',
+        description: 'Universitas Mercu Buana menumbuh kembangkan Jiwa Bersaing di Industri 4.0, dengan Kurikulum dan Pembelajaran yang sesuai kebutuhan Industri tersebut.'
     },
     {
         id: 3,
-        image: Image3,
-        title: 'Sarah Beck',
-        description: 'A really good job, all aspects of the project were followed step by step and with good result'
+        image: '/testimoni/3.webp',
+        name: 'Alicia Maria S D (Akuntansi UMB - Finalis Miss Indonesia 2018)',
+        description: '78% Lulusan UMB memiliki Sertifikasi Kompetensi dan terserap di Industri. sisanya menjadi Wirausaha dan pemilik Bisnis Mandiri. Daftar segera UMB untuk Masa Depan kamu Sahabat Muda.'
     },
-    {
-        id: 4,
-        image: Image3,
-        title: 'Sarah Beck',
-        description: 'A really good jobs, all aspects of the project were followed steps by step and with good result'
-    }
 
 ]

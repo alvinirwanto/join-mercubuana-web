@@ -63,7 +63,7 @@ const TentangUMB = () => {
                 subtitle='Mengenai'
             />
 
-            <div className="mt-[5rem] relative rounded-sm overflow-clip">
+            <div className="mt-[5rem] relative rounded-lg overflow-clip">
                 <Image
                     src='/campus-2.jpeg'
                     width={2000}
@@ -109,7 +109,7 @@ const TentangUMB = () => {
                 </div>
             </div>
 
-            <div className="grid grid-cols-1 xl:grid-cols-[1.5fr_2fr] gap-8 mt-[3rem] px-3 py-8 md:p-[3rem] border-[1px] border-gray-300 rounded-sm overflow-clip">
+            <div className="grid grid-cols-1 xl:grid-cols-[1.5fr_2fr] gap-8 mt-[3rem] px-3 py-8 md:p-[3rem] border-[1px] border-gray-300 rounded-md overflow-clip">
                 <div className="flex flex-col gap-[3rem] order-2 xl:order-1">
                     <div className="flex flex-col gap-4">
                         <h2 className="font-semibold text-2xl">Fasilitas Kampus</h2>
