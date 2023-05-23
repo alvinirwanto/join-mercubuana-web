@@ -11,7 +11,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 // import required modules
-import { Pagination, Navigation } from "swiper";
+import { Pagination, Navigation, Autoplay } from "swiper";
 
 import TitleSection from "../components/TitleSection";
 
@@ -45,7 +45,7 @@ const TentangUMB = () => {
     const fnPrev = React.useCallback(
         () => {
             // Optional Chaining
-            if (realSlide > 0) swiper?.current?.slidePrev()
+            if (realSlide < images.length) swiper?.current?.slidePrev()
         },
         [swiper, realSlide]
     )
@@ -69,15 +69,15 @@ const TentangUMB = () => {
                     width={2000}
                     height={2000}
                     alt='campus'
-                    className='w-full h-[150vh] md:h-[90vh] object-cover'
+                    className='w-full h-[130vh] md:h-[90vh] object-cover'
                 />
 
-                <div className="absolute top-0 w-full h-full bg-gradient-to-t xl:bg-gradient-to-r from-white to-[#00326f57] grid grid-cols-1 xl:grid-cols-[1fr_1.5fr] place-items-center">
-                    <div className="flex flex-col gap-6 px-8 order-2 xl:order-1">
-                        <h2 className="text-4xl font-semibold">
+                <div className="absolute top-0 w-full h-full bg-gradient-to-t xl:bg-gradient-to-r from-white via-[#ffffffd7] to-[#00326f57] grid grid-cols-1 xl:grid-cols-[1fr_1.5fr] place-items-center">
+                    <div className="flex flex-col gap-6 px-3 md:px-8 order-2 xl:order-1">
+                        <h2 className="text-2xl xl:text-4xl font-semibold">
                             Universitas Mercu Buana, <br /> Pilihan Terbaik PTS di Indonesia
                         </h2>
-                        <p className="text-lg">Universitas Mercu Buana merupakan salah satu perguruan tinggi swasta terbaik di Indonesia yang telah terakreditasi BAN PT. UMB memiliki program studi unggulan yang siap mengantarkan mahasiswa menjadi tenaga profesional yang andal. Universitas Mercu Buana hadir sebagai universitas swasta terbaik dengan biaya yang sesuai dengan kualitas dan menyediakan berbagai program kelas karyawan untuk para tenaga profesional yang ingin melanjutkan pendidikan ke jenjang yang lebih tinggi.</p>
+                        <p className="text-lg md:text-xl xl:text-lg">Universitas Mercu Buana merupakan salah satu perguruan tinggi swasta terbaik di Indonesia yang telah terakreditasi BAN PT. UMB memiliki program studi unggulan yang siap mengantarkan mahasiswa menjadi tenaga profesional yang andal. Universitas Mercu Buana hadir sebagai universitas swasta terbaik dengan biaya yang sesuai dengan kualitas dan menyediakan berbagai program kelas karyawan untuk para tenaga profesional yang ingin melanjutkan pendidikan ke jenjang yang lebih tinggi.</p>
                     </div>
 
                     <div
@@ -124,7 +124,12 @@ const TentangUMB = () => {
 
                 <Swiper
                     slidesPerView={1}
-                    // centeredSlides={true}
+                    loop={true}
+                    autoplay={{
+                        delay: 3000,
+                        disableOnInteraction: false,
+                    }}
+                    loopFillGroupWithBlank={true}
                     spaceBetween={15}
                     grabCursor={true}
                     breakpoints={{
@@ -137,7 +142,7 @@ const TentangUMB = () => {
                         swiper.current = s
                     }}
                     // navigation={true}
-                    modules={[Pagination]}
+                    modules={[Pagination, Autoplay]}
                     className="w-full order-1 xl:order-2"
                 >
                     {

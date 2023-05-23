@@ -72,9 +72,9 @@ const Heropage = () => {
                                 height="850"
                                 className='max-h-[20rem]'
                                 src="https://omni.mercubuana.ac.id/crm-mx/crm-app/forms/wtl/77e6c3eac6ff3a5bf2b9ae14c5a4872c"
-                                frameborder="0"
+                                frameBorder="0"
                                 sandbox="allow-top-navigation allow-scripts allow-forms allow-same-origin"
-                                allowfullscreen>
+                                allowFullscreen>
                             </iframe>
                         </div>
                     </div>

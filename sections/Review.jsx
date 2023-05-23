@@ -1,6 +1,4 @@
-'use client';
-
-import React from 'react'
+import React, { useRef, useState } from "react";
 import TitleSection from '../components/TitleSection'
 
 import Image from 'next/image';
@@ -15,28 +13,51 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 import { Autoplay, Pagination } from "swiper";
+import { RiArrowLeftSLine, RiArrowRightSLine } from "react-icons/ri";
 
 const Review = () => {
+
+    const [realSlide, setRealSlide] = useState(0)
+    const swiper = useRef()
+
+    const fnPrev = React.useCallback(
+        () => {
+            // Optional Chaining
+            if (realSlide < testimonial.length) swiper?.current?.slidePrev()
+        },
+        [swiper, realSlide]
+    )
+
+    const fnNext = React.useCallback(
+        () => {
+            if (realSlide < testimonial.length) swiper?.current?.slideNext()
+        },
+        [swiper, realSlide]
+    )
+
     return (
-        <div className='primary-padding my-[5rem]'>
+        <div className='primary-padding my-[10rem]'>
             <TitleSection
                 subtitle='Apa Kata Mereka?'
                 title='Simak ulasan para mahasiswa dan alumni Universitas Mercu Buana'
             />
 
             <Swiper
-                className='my-[5rem]'
+                className='mt-[5rem]'
                 loop={true}
-                loopFillGroupWithBlank={true}
                 slidesPerView={2}
                 spaceBetween={15}
                 grabCursor={true}
                 autoplay={{
-                    delay: 2500,
+                    delay: 3000,
                     disableOnInteraction: false,
                 }}
                 pagination={{
                     clickable: true,
+                }}
+                onSlideChange={(s) => setRealSlide(s.realIndex)}
+                onSwiper={(s) => {
+                    swiper.current = s
                 }}
                 breakpoints={{
                     0: {
@@ -67,6 +88,23 @@ const Review = () => {
                     })
                 }
             </Swiper>
+
+            {/* ===== Navigation ====== */}
+            <div className={`flex justify-end w-full gap-2 z-50 mt-8 pr-2 md:pr-0`}>
+                <button
+                    onClick={fnPrev}
+                    className={`bg-black p-2 rounded-full shadow-lg ml-4 text-white`}
+                >
+                    <RiArrowLeftSLine className='text-2xl' />
+                </button>
+
+                <button
+                    onClick={fnNext}
+                    className={`bg-black p-2 rounded-full shadow-lg mr-2 text-white`}
+                >
+                    <RiArrowRightSLine className='text-2xl' />
+                </button>
+            </div>
         </div>
     )
 }
