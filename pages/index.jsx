@@ -23,7 +23,7 @@ export default function Home() {
           content="Website join Universitas Mercu Buana"
         />
         <meta name="keywords" content="join universitas mercu buana umb" />
-        <link rel="icon" href="/logo-umb.png" />
+        <link rel="icon" href="/logo/logo-umb.png" />
       </Head>
 
       <Navbar />

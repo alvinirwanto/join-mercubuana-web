@@ -123,20 +123,26 @@ const TentangUMB = () => {
                 </div>
 
                 <Swiper
-                    slidesPerView={1}
+
+                    //Use slidesPerView auto and loopedSlides to avoid hydration error
+                    slidesPerView="auto"
+                    spaceBetween={10}
+                    loopedSlides={3}
+                    breakpoints={{
+                        320: {
+                            slidesPerView: 1
+                        },
+                        768: {
+                            slidesPerView: 2,
+                            spaceBetween: 10,
+                        }
+                    }}
                     loop={true}
                     autoplay={{
                         delay: 3000,
                         disableOnInteraction: false,
                     }}
-                    loopFillGroupWithBlank={true}
-                    spaceBetween={15}
                     grabCursor={true}
-                    breakpoints={{
-                        480: {
-                            slidesPerView: 2,
-                        }
-                    }}
                     onSlideChange={(s) => setRealSlide(s.realIndex)}
                     onSwiper={(s) => {
                         swiper.current = s
@@ -150,8 +156,8 @@ const TentangUMB = () => {
                             <SwiperSlide key={img.id}>
                                 <Image
                                     src={img.link}
-                                    width={500}
                                     height={500}
+                                    width={500}
                                     alt='campus'
                                     className="object-cover h-full w-[25rem]"
                                 />

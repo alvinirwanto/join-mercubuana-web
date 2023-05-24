@@ -111,15 +111,13 @@ const Navbar = () => {
                 </ul>
             </div>
 
-            <div className='fixed w-full h-full z-[300]'>
-                <a
-                    href='https://wa.me/6281513113331'
-                    target='_blank'
-                    className="absolute bottom-6 xl:bottom-10 right-4 xl:right-10 bg-[#23C467] text-white text-3xl p-4 rounded-full"
-                >
-                    <BsWhatsapp />
-                </a>
-            </div>
+            <a
+                href='https://wa.me/6281513113331'
+                target='_blank'
+                className="z-[400] fixed bottom-6 xl:bottom-10 right-4 xl:right-10 bg-[#23C467] text-white text-4xl p-4 rounded-full"
+            >
+                <BsWhatsapp />
+            </a>
         </>
     )
 }

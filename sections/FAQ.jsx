@@ -4,8 +4,6 @@ import TitleSection from '../components/TitleSection'
 import * as Accordion from '@radix-ui/react-accordion'
 import { ChevronDownIcon } from '@radix-ui/react-icons';
 import classNames from 'classnames'
-import Link from 'next/link';
-import { MdKeyboardArrowDown, MdOutlinePlayArrow } from 'react-icons/md'
 
 
 const lists = [
@@ -28,12 +26,6 @@ const lists = [
             'Kampus Pejaten Jakarta Selatan'
         ]
     },
-    // {
-    //     q: 'Berapa biaya kuliah kelas karyawan Universitas Mercu Buana',
-    //     a: [
-    //         'ss'
-    //     ]
-    // },
     {
         question: 'Bagaimana jadwal kuliah kelas karyawan Universitas Mercu Buana',
         answers: [
@@ -140,10 +132,10 @@ const FAQ = () => {
             >
                 {children}
                 <div className='flex justify-end'>
-                <ChevronDownIcon
-                    className="ease-[cubic-bezier(0.87,_0,_0.13,_1)] scale-150 transition-transform duration-300 group-data-[state=open]:rotate-180"
-                    aria-hidden
-                />
+                    <ChevronDownIcon
+                        className="ease-[cubic-bezier(0.87,_0,_0.13,_1)] scale-150 transition-transform duration-300 group-data-[state=open]:rotate-180"
+                        aria-hidden
+                    />
                 </div>
             </Accordion.Trigger>
         </Accordion.Header>
