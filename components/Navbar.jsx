@@ -15,6 +15,8 @@ const Navbar = () => {
 
     const [showNav, setShowNav] = useState(false)
 
+    const [showBrosur, setShowBrosur] = useState(false)
+
     const addShadowNav = () => {
         window.scrollY >= 80 ? setShadowNav(true) : setShadowNav(false)
     }
@@ -66,6 +68,7 @@ const Navbar = () => {
                     </div>
 
                     <button
+                        onClick={() => setShowBrosur(true)}
                         className={`flex justify-center items-center text-sm xl:text-base gap-2 px-4 py-2 rounded-md duration-200 border-2 ${shadowNav ? 'border-primary-blue text-primary-blue hover:bg-primary-blue hover:text-white' : 'border-white text-white hover:bg-white hover:text-primary-blue'} `}
                     >
                         <HiDownload />
@@ -118,6 +121,42 @@ const Navbar = () => {
             >
                 <BsWhatsapp />
             </a>
+
+            {/* ======== Unduh Brosur ======= */}
+            <div className={`w-full h-full bg-[#00000092] fixed z-[300] ${showBrosur ? 'grid' : 'hidden'} place-items-center`}>
+                <div className='bg-white w-[95%] md:w-[80%] xl:w-[55%] py-8 px-6 md:px-8 xl:px-10 rounded-md'>
+                    <div className='flex justify-end text-black mb-8'>
+                        <BiX onClick={() => setShowBrosur(false)} className='text-3xl cursor-pointer' />
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-8">
+                        <div className='col-start-1 col-end-8 md:col-end-6 grid-rows-1 row-start-1 flex flex-col gap-8 z-[2]'>
+                            <img
+                                src='/logo/logo-umb-full.png'
+                                // width={500}
+                                // height={500}
+                                className='object-contain w-[5rem]'
+                            />
+                            <div>
+                                <span className='text-3xl font-semibold'>Unduh brosur sekarang</span>
+                                <p className='text-base'>Isi data diri Anda di bawah ini untuk dapatkan brosur seputar informasi Universitas Mercu Buana</p>
+                                <iframe className='w-full h-[20rem] -ml-4 md:-ml-6' src="https://omni.mercubuana.ac.id/crm-mx/crm-app/forms/wtl/9b465727dfe849103f647d56c33301c8" frameBorder="0" sandbox="allow-top-navigation allow-scripts allow-forms allow-same-origin" allowFullScreen></iframe>
+                            </div>
+
+                        </div>
+
+                        <div className='col-start-1 md:col-start-4 col-end-9 grid-rows-1 row-start-1 z-[1] relative grid place-items-center'>
+                            <div className='rotate-6 z-[2] bg-gradient-to-r from-[#ffffffe1] via-[#ffffffdc] to-transparent w-full h-full absolute top-0'></div>
+
+                            <img
+                                src='/brosur.png'
+                                // width={700}
+                                // height={700}
+                                className='z-[1] w-[90%] object-contain shadow-md rotate-6 border-[1px]'
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
         </>
     )
 }
