@@ -36,7 +36,7 @@ const steps = [
 
 const AlurPenerimaan = () => {
     return (
-        <div className='primary-padding my-[5rem]'>
+        <div name='alur-penerimaan' className='primary-padding my-[5rem]'>
             <TitleSection
                 subtitle='Alur Penerimaan Mahasiswa Baru'
                 middleText='Secara Online'

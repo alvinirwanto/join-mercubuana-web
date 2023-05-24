@@ -57,7 +57,7 @@ const TentangUMB = () => {
         [swiper, realSlide]
     )
     return (
-        <div className="w-full primary-padding mt-[5rem]">
+        <div name='tentang' className="w-full primary-padding mt-[5rem]">
             <TitleSection
                 title='Universitas Mercu Buana'
                 subtitle='Mengenai'

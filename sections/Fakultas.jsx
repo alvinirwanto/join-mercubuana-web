@@ -12,7 +12,7 @@ import Image from 'next/image'
 const Fakultas = () => {
 
     return (
-        <div className='primary-padding py-[10rem]'>
+        <div name='fakultas' className='primary-padding py-[10rem]'>
             <TitleSection
                 subtitle='Fakultas & Program Studi'
                 title='Universitas Mercu Buana'

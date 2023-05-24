@@ -164,7 +164,7 @@ const FAQ = () => {
 
 
     return (
-        <div className='primary-padding my-[10rem]'>
+        <div name='faq' className='primary-padding my-[10rem]'>
             <TitleSection
                 title='FAQ'
             />
