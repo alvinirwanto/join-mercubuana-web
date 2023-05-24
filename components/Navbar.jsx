@@ -139,7 +139,7 @@ const Navbar = () => {
                             <div>
                                 <span className='text-3xl font-semibold'>Unduh brosur sekarang</span>
                                 <p className='text-base'>Isi data diri Anda di bawah ini untuk dapatkan brosur seputar informasi Universitas Mercu Buana</p>
-                                <iframe className='w-full h-[20rem] -ml-4 md:-ml-6' src="https://omni.mercubuana.ac.id/crm-mx/crm-app/forms/wtl/9b465727dfe849103f647d56c33301c8" frameBorder="0" sandbox="allow-top-navigation allow-scripts allow-forms allow-same-origin" allowFullScreen></iframe>
+                                <iframe className='w-full h-[20rem] -ml-4 md:-ml-6' src="https://omni.mercubuana.ac.id/crm-mx/crm-app/forms/wtl/a06697d979a8c6dad5060b086994ee1c" frameBorder="0" sandbox="allow-top-navigation allow-scripts allow-forms allow-same-origin" allowFullScreen></iframe>
                             </div>
 
                         </div>
@@ -149,8 +149,6 @@ const Navbar = () => {
 
                             <img
                                 src='/brosur.png'
-                                // width={700}
-                                // height={700}
                                 className='z-[1] w-[90%] object-contain shadow-md rotate-6 border-[1px]'
                             />
                         </div>
