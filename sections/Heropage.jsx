@@ -50,7 +50,10 @@ const Heropage = () => {
                 {
                     items.map((item, id) => (
                         <SwiperSlide key={id}>
-                            <img src={`/hero/${item.image}`} alt="image" className="object-cover w-full h-full" />
+                            <Image
+                                width={1000}
+                                height={1000}
+                                src={`/hero/${item.image}`} alt="image" className="object-cover w-full h-full" />
                         </SwiperSlide>
                     ))
                 }
