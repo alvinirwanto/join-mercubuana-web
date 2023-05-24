@@ -94,16 +94,17 @@ const TentangUMB = () => {
             <div className={showVideo
                 ? "bg-[#000000d2] fixed flex justify-center items-center z-[100] top-0 left-0 w-full h-screen"
                 : "hidden"}>
-                <div className="flex items-start gap-4 w-[70%]">
+                <div className="flex flex-col md:flex-row items-start gap-4 w-[95%] md:w-[85%] xl:w-[70%]">
                     <iframe
-                        className="w-full aspect-video"
+                        className="w-full aspect-video order-2 md:order-1"
                         src={showVideo ? "https://www.youtube.com/embed/-_sIStXUSBw?autoplay=1" : ""}
                         allow='autoplay'
+                        allowFullScreen
                         title="YouTube video player"
                     />
                     <div
                         onClick={() => { setShowVideo(false) }}
-                        className="text-white cursor-pointer p-0">
+                        className="text-white cursor-pointer p-0 order-1 md:order-2 self-end md:self-start">
                         <BiX className="text-4xl" />
                     </div>
                 </div>

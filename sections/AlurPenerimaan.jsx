@@ -54,7 +54,7 @@ const AlurPenerimaan = () => {
                                 <span className='rounded-full grid place-items-center bg-primary-blue h-[4rem] aspect-square text-white font-semibold border-8 border-white text-xl'>0{step.no}</span>
 
                                 <div className='flex flex-col border-[1px] shadow-md p-8 rounded-md w-full md:w-[70vw] xl:w-[40vw] bg-white'>
-                                    <span className='text-2xl font-bold'>{step.title}</span>
+                                    <span className='text-xl font-bold'>{step.title}</span>
                                     <p className='text-base'>{step.content}</p>
                                 </div>
                             </div>
