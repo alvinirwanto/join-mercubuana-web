@@ -77,7 +77,7 @@ const TentangUMB = () => {
                         <h2 className="text-2xl xl:text-4xl font-semibold">
                             Universitas Mercu Buana, <br /> Pilihan Terbaik PTS di Indonesia
                         </h2>
-                        <p className="text-lg md:text-xl xl:text-lg">Universitas Mercu Buana merupakan salah satu perguruan tinggi swasta terbaik di Indonesia yang telah terakreditasi BAN PT. UMB memiliki program studi unggulan yang siap mengantarkan mahasiswa menjadi tenaga profesional yang andal. Universitas Mercu Buana hadir sebagai universitas swasta terbaik dengan biaya yang sesuai dengan kualitas dan menyediakan berbagai program kelas karyawan untuk para tenaga profesional yang ingin melanjutkan pendidikan ke jenjang yang lebih tinggi.</p>
+                        <p className="text-lg md:text-xl xl:text-lg">Universitas Mercu Buana telah mendapatkan akreditasi "UNGGUL" dari BAN-PT yang menjadikan Universitas Mercu Buana menjadi salah satu Universitas terbaik di Indonesia. Universitas Mercu Buana juga telah memiliki Akreditasi "UNGGUL" untuk beberapa jurusan yang ada. Mari bergabung bersama Universitas Mercu Buana dan jadilah Komunitas Berkelas Dunia</p>
                     </div>
 
                     <div

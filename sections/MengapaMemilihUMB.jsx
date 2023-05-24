@@ -29,8 +29,9 @@ const MengapaMemilihUMB = () => {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
                         {
-                            listOfReason.map((item, index) => (
-                                <div key={index} className="p-4 md:p-8 rounded-md text-black bg-[#fffffff3] flex flex-col justify-center gap-6 items-center">
+                            listOfReason.map((item, i) => (
+                                <div key={i} className="p-4 md:p-8 rounded-md text-black bg-[#fffffff3] flex flex-col justify-center gap-6 items-center relative">
+                                    <span className="absolute -top-4 -left-4 bg-primary-blue shadow-lg rounded-full h-9 w-9 flex items-center justify-center text-white">{i + 1}</span>
                                     <p className="text-lg text-center">{item.reason}</p>
                                 </div>
                             ))

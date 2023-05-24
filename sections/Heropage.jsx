@@ -69,7 +69,7 @@ const Heropage = () => {
 
                         <div className='bg-white flex flex-col justify-center gap-4'>
                             <p className='font-medium text-base text-secondary-blue'>
-                                Isi Data Diri Kamu Disini dan Dapatkan Informasi serta Penawaran Menarik Lainnya
+                                Isi Data Diri Kamu Disini dan Dapatkan Informasi serta cicilan biaya kuliah hingga 48 kali!
                             </p>
                             <iframe
                                 height="850"
