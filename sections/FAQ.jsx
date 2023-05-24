@@ -173,7 +173,7 @@ const FAQ = () => {
                                 <ol className='text-base'>
                                     {
                                         lists[selected].answers.map((answer, i) => (
-                                            <li key={i} className={`${lists[selected].answers.length > 2 ? 'list-decimal' : 'list-none'}  list-inside`}>{answer}</li>
+                                            <li key={i} className={`${lists[selected].answers.length > 2 ? 'list-decimal ml-6' : 'list-none'} list-outside`}>{answer}</li>
                                         ))
                                     }
                                 </ol>
