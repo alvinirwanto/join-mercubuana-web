@@ -4,6 +4,17 @@
 @tailwind components;
 @tailwind utilities;
 
+::-moz-selection {
+  /* Code for Firefox */
+  color: #fff;
+  background: #00326f;
+}
+
+::selection {
+  color: #fff;
+  background: #00326f;
+}
+
 html,
 body {
   padding: 0;
@@ -19,7 +30,7 @@ body {
 }
 
 .swiper-pagination-bullet {
-    background-color: transparent !important;
+  background-color: transparent !important;
   border: 1px solid rgba(255, 255, 255, 0.568);
   opacity: 1 !important;
 }
