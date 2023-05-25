@@ -77,7 +77,7 @@ const Heropage = () => {
                                 src="https://omni.mercubuana.ac.id/crm-mx/crm-app/forms/wtl/77e6c3eac6ff3a5bf2b9ae14c5a4872c"
                                 frameBorder="0"
                                 sandbox="allow-top-navigation allow-scripts allow-forms allow-same-origin"
-                                allowFullscreen>
+                                allowFullScreen>
                             </iframe>
                         </div>
                     </div>

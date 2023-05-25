@@ -1,6 +1,4 @@
 import React, { useRef, useState } from "react";
-import mercu from "../public/Kelas-karyawan.webp";
-import CampusImg2 from '../public/campus-2.jpeg'
 import Image from "next/image";
 
 // Import Swiper React components
@@ -19,19 +17,37 @@ import { BsPlayCircleFill } from 'react-icons/bs'
 import { BiX } from 'react-icons/bi'
 import { RiArrowLeftSLine, RiArrowRightSLine } from "react-icons/ri";
 
+// import CampusImg from '../public'
+
 
 const images = [
     {
         id: '1',
-        link: '/campus-2.jpeg'
+        link: '/fasilitas/fasilitas-1.jpg'
     },
     {
         id: '2',
-        link: '/fdsk.jpeg'
+        link: '/fasilitas/fasilitas-2.jpg'
     },
     {
         id: '3',
-        link: '/ft.jpeg'
+        link: '/fasilitas/fasilitas-3.jpg'
+    },
+    {
+        id: '4',
+        link: '/fasilitas/fasilitas-4.jpg'
+    },
+    {
+        id: '5',
+        link: '/fasilitas/fasilitas-5.jpg'
+    },
+    {
+        id: '6',
+        link: '/fasilitas/fasilitas-6.jpg'
+    },
+    {
+        id: '7',
+        link: '/fasilitas/fasilitas-7.jpg'
     }
 ]
 
@@ -65,14 +81,14 @@ const TentangUMB = () => {
 
             <div className="mt-[5rem] relative rounded-lg overflow-clip">
                 <Image
-                    src='/campus-2.jpeg'
-                    width={2000}
-                    height={2000}
+                    src='/campus.png'
+                    width={1000}
+                    height={1000}
                     alt='campus'
                     className='w-full h-[130vh] md:h-[90vh] object-cover'
                 />
 
-                <div className="absolute top-0 w-full h-full bg-gradient-to-t xl:bg-gradient-to-r from-white via-[#ffffffd7] to-[#00326f57] grid grid-cols-1 xl:grid-cols-[1fr_1.5fr] place-items-center">
+                <div className="absolute top-0 w-full h-full bg-gradient-to-t xl:bg-gradient-to-r from-white via-[#ffffffe2] xl:via-[#ffffffab] to-[#00326f57] grid grid-cols-1 xl:grid-cols-[1fr_1.5fr] place-items-center">
                     <div className="flex flex-col gap-6 px-3 md:px-8 order-2 xl:order-1">
                         <h2 className="text-2xl xl:text-4xl font-semibold">
                             Universitas Mercu Buana, <br /> Pilihan Terbaik PTS di Indonesia
@@ -128,7 +144,7 @@ const TentangUMB = () => {
                     //Use slidesPerView auto and loopedSlides to avoid hydration error
                     slidesPerView="auto"
                     spaceBetween={10}
-                    loopedSlides={3}
+                    loopedSlides={7}
                     breakpoints={{
                         320: {
                             slidesPerView: 1
@@ -173,14 +189,14 @@ const TentangUMB = () => {
                 <div className={`flex justify-end w-full gap-2 z-50`}>
                     <button
                         onClick={fnPrev}
-                        className={`bg-black p-2 rounded-full shadow-lg ml-4 text-white`}
+                        className={`bg-primary-blue p-2 rounded-full shadow-lg ml-4 text-white`}
                     >
                         <RiArrowLeftSLine className='text-2xl' />
                     </button>
 
                     <button
                         onClick={fnNext}
-                        className={`bg-black p-2 rounded-full shadow-lg mr-2 text-white`}
+                        className={`bg-primary-blue p-2 rounded-full shadow-lg mr-2 text-white`}
                     >
                         <RiArrowRightSLine className='text-2xl' />
                     </button>
