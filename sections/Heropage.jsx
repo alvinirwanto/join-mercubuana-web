@@ -18,7 +18,7 @@ import { Pagination, Autoplay } from "swiper";
 const items = [
     {
         id: 1,
-        image: 'hero-1.jpg'
+        image: 'banner-1.jpg'
     },
     {
         id: 2,

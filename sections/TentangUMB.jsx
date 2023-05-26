@@ -88,7 +88,7 @@ const TentangUMB = () => {
                     className='w-full h-[130vh] md:h-[90vh] object-cover'
                 />
 
-                <div className="absolute top-0 w-full h-full bg-gradient-to-t xl:bg-gradient-to-r from-white via-[#ffffffe2] xl:via-[#ffffffab] to-[#00326f57] grid grid-cols-1 xl:grid-cols-[1fr_1.5fr] place-items-center">
+                <div className="absolute top-0 w-full h-full bg-gradient-to-t xl:bg-gradient-to-r from-white via-[#ffffffe2] xl:via-[#ffffffd4] to-[#00326f57] grid grid-cols-1 xl:grid-cols-[1fr_1.5fr] place-items-center">
                     <div className="flex flex-col gap-6 px-3 md:px-8 order-2 xl:order-1">
                         <h2 className="text-2xl xl:text-4xl font-semibold">
                             Universitas Mercu Buana, <br /> Pilihan Terbaik PTS di Indonesia
