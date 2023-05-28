@@ -33,7 +33,7 @@ const Navbar = () => {
 
     return (
         <>
-            <nav className={`${shadowNav ? 'shadow-md bg-white duration-300' : 'shadow-none bg-transparent duration-300'} duration-300 w-full primary-padding flex justify-between items-center fixed top-0 z-[100]`}>
+            <nav className={`${shadowNav ? 'shadow-md bg-white duration-300' : 'shadow-none bg-gradient-to-b from-[#000000bc] via-[#0000006c] to-[#113dec01] duration-300'} duration-300 w-full primary-padding flex justify-between items-center fixed top-0 z-[100]`}>
 
                 <Image
                     src={shadowNav ? '/logo/logo-umb-full.png' : '/logo/logo-umb-white.png'}
