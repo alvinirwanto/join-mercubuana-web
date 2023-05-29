@@ -1,6 +1,7 @@
 import Image from "next/image";
 
-import { BiBadgeCheck } from 'react-icons/bi'
+import { motion } from "framer-motion";
+import { slideIn, staggerAnimation, staggerItems } from "../utils/motion";
 
 const listOfReason = [
     { reason: 'Program studi telah terakreditasi BAN PT' },
@@ -23,20 +24,33 @@ const MengapaMemilihUMB = () => {
                 />
 
                 <div className="h-full w-full z-50 absolute top-0 bg-gradient-to-b from-[#000000d9] via-[#00000076] to-[#000000aa] text-white p-4 md:p-[2rem] xl:p-[4rem] flex flex-col gap-[3rem] justify-center">
-                    <div className="max-w-[700px]">
+                    <motion.div
+                        variants={slideIn('up', 0, .5)}
+                        initial='hidden'
+                        whileInView='show'
+                        className="max-w-[700px]"
+                    >
                         <h4 className="text-2xl md:text-4xl font-semibold">Mengapa Memilih Kelas Karyawan Universitas Mercu Buana Sebagai Tempat Kuliah yang Tepat dan Terbaik?</h4>
-                    </div>
+                    </motion.div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+                    <motion.div
+                        variants={staggerAnimation()}
+                        initial='hidden'
+                        whileInView='show'
+                        className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8"
+                    >
                         {
                             listOfReason.map((item, i) => (
-                                <div key={i} className="mx-5 md:mx-0 p-4 md:p-8 rounded-md text-black bg-[#fffffff3] flex flex-col justify-center gap-6 items-center relative">
+                                <motion.div
+                                    variants={staggerItems()}
+                                    key={i} className="mx-5 md:mx-0 p-4 md:p-8 rounded-md text-black bg-[#fffffff3] flex flex-col justify-center gap-6 items-center relative"
+                                >
                                     <span className="absolute -top-4 -left-4 bg-primary-blue shadow-lg rounded-full h-9 w-9 flex items-center justify-center text-white">{i + 1}</span>
                                     <p className="text-lg text-center">{item.reason}</p>
-                                </div>
+                                </motion.div>
                             ))
                         }
-                    </div>
+                    </motion.div>
                 </div>
             </div>
         </div>

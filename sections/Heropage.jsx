@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import { motion } from 'framer-motion'
 
 import HeroBg from '../public/umb.png'
 import HeroImg from '../public/student.png'
@@ -14,6 +15,7 @@ import "swiper/css/pagination";
 
 
 import { Pagination, Autoplay } from "swiper";
+import { opacityIn, slideIn, slideUp, zoomIn } from '../utils/motion';
 
 const items = [
     {
@@ -90,7 +92,13 @@ const Heropage = () => {
                     ))
                 }
 
-                <div className='hidden md:block'>
+                <motion.div
+                    variants={opacityIn(0.2, 0.5)}
+                    initial='hidden'
+                    whileInView='show'
+                    viewport={{ once: true }}
+                    className='hidden md:block'
+                >
                     <div className='absolute bottom-[3rem] md:right-10 xl:top-[8rem] xl:right-[5rem] w-[95vw] md:max-w-[70vw] xl:max-w-[38vw] z-[20]'>
                         <div className='border-[1px] shadow-md rounded-lg p-8 xl:p-[3rem] bg-white flex flex-col gap-4'>
                             <div>
@@ -113,7 +121,7 @@ const Heropage = () => {
                             </div>
                         </div>
                     </div>
-                </div>
+                </motion.div>
 
             </Swiper>
 

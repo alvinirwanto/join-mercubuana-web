@@ -4,6 +4,8 @@ import TitleSection from '../components/TitleSection'
 import Image from 'next/image';
 import { testimonial } from '../data/DataTestimonial'
 
+import { motion } from "framer-motion";
+
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -14,6 +16,7 @@ import "swiper/css/navigation";
 
 import { Autoplay, Pagination } from "swiper";
 import { RiArrowLeftSLine, RiArrowRightSLine } from "react-icons/ri";
+import { slideIn } from "../utils/motion";
 
 const Review = () => {
 
@@ -37,10 +40,17 @@ const Review = () => {
 
     return (
         <div className='primary-padding my-[10rem]'>
-            <TitleSection
-                subtitle='Apa Kata Mereka?'
-                title='Simak ulasan para mahasiswa dan alumni Universitas Mercu Buana'
-            />
+
+            <motion.div
+                variants={slideIn('up', 0, 0.5)}
+                initial='hidden'
+                whileInView='show'
+            >
+                <TitleSection
+                    subtitle='Apa Kata Mereka?'
+                    title='Simak ulasan para mahasiswa dan alumni Universitas Mercu Buana'
+                />
+            </motion.div>
 
             <Swiper
                 className='mt-[5rem] py-6'
@@ -50,7 +60,7 @@ const Review = () => {
                 spaceBetween={15}
                 grabCursor={true}
                 autoplay={{
-                    delay: 3000,
+                    delay: 3500,
                     disableOnInteraction: false,
                 }}
                 pagination={{

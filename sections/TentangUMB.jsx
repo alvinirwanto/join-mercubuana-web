@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -16,6 +17,7 @@ import TitleSection from "../components/TitleSection";
 import { BsPlayCircleFill } from 'react-icons/bs'
 import { BiX } from 'react-icons/bi'
 import { RiArrowLeftSLine, RiArrowRightSLine } from "react-icons/ri";
+import { slideIn, zoomIn } from "../utils/motion";
 
 // import CampusImg from '../public'
 
@@ -74,10 +76,17 @@ const TentangUMB = () => {
     )
     return (
         <div name='tentang' className="w-full primary-padding mt-[5rem]">
-            <TitleSection
-                title='Universitas Mercu Buana'
-                subtitle='Mengenai'
-            />
+
+            <motion.div
+                variants={slideIn('up', 0, 0.5)}
+                initial='hidden'
+                whileInView='show'
+            >
+                <TitleSection
+                    title='Universitas Mercu Buana'
+                    subtitle='Mengenai'
+                />
+            </motion.div>
 
             <div className="mt-[5rem] relative rounded-lg overflow-clip">
                 <Image
@@ -89,21 +98,29 @@ const TentangUMB = () => {
                 />
 
                 <div className="absolute top-0 w-full h-full bg-gradient-to-t xl:bg-gradient-to-r from-white via-[#ffffffe2] xl:via-[#ffffffd4] to-[#00326f57] grid grid-cols-1 xl:grid-cols-[1fr_1.5fr] place-items-center">
-                    <div className="flex flex-col gap-6 px-3 md:px-8 order-2 xl:order-1">
+                    <motion.div
+                        variants={slideIn('left', 0,)}
+                        initial='hidden'
+                        whileInView='show'
+                        className="flex flex-col gap-6 px-3 md:px-8 order-2 xl:order-1"
+                    >
                         <h2 className="text-2xl xl:text-4xl font-semibold">
                             Universitas Mercu Buana, <br /> Pilihan Terbaik PTS di Indonesia
                         </h2>
                         <p className="text-lg md:text-xl xl:text-lg">Universitas Mercu Buana telah mendapatkan akreditasi "UNGGUL" dari BAN-PT yang menjadikan Universitas Mercu Buana menjadi salah satu Universitas terbaik di Indonesia. Universitas Mercu Buana juga telah memiliki Akreditasi "UNGGUL" untuk beberapa jurusan yang ada. Mari bergabung bersama Universitas Mercu Buana dan jadilah Komunitas Berkelas Dunia</p>
-                    </div>
+                    </motion.div>
 
-                    <div
+                    <motion.div
+                        variants={zoomIn(0.5, 0.3)}
+                        initial='hidden'
+                        whileInView='show'
                         onClick={() => { setShowVideo(true) }}
                         className="flex flex-col items-center justify-center gap-4 my-[5rem] xl:my-0 text-black relative cursor-pointer order-1 xl:order-2"
                     >
                         <BsPlayCircleFill className="text-6xl absolute top-0 w-full h-full" />
                         <div className="bg-black h-[5rem] aspect-square rounded-full flex justify-center items-center animate-ping">
                         </div>
-                    </div>
+                    </motion.div>
                 </div>
             </div>
 
@@ -127,7 +144,12 @@ const TentangUMB = () => {
             </div>
 
             <div className="grid grid-cols-1 xl:grid-cols-[1.5fr_2fr] gap-8 mt-[3rem] px-3 py-8 md:p-[3rem] border-[1px] border-gray-300 rounded-md overflow-clip">
-                <div className="flex flex-col gap-[3rem] order-2 xl:order-1">
+                <motion.div
+                    variants={slideIn('left', 0,)}
+                    initial='hidden'
+                    whileInView='show'
+                    className="flex flex-col gap-[3rem] order-2 xl:order-1"
+                >
                     <div className="flex flex-col gap-4">
                         <h2 className="font-semibold text-2xl">Fasilitas Kampus</h2>
                         <p>Universitas Mercu Buana dilengkapi dengan berbagai sarana dan prasarana untuk menunjang kenyamanan proses pembelajaran seperti ruang kelas yang nyaman, kampus yang dilengkapi dengan berbagai lapangan olahraga, auditorium, sasana kreasi buana, poliklinik, gedung dormitory dengan fasilitas penunjang yang lengkap, dan laboratorium mahasiswa yang terdapat di seluruh kampus.</p>
@@ -137,7 +159,7 @@ const TentangUMB = () => {
                         <h2 className="font-semibold text-2xl">Lokasi Kampus</h2>
                         <p>Lokasi Universitas Mercu Buana berada di tiga area yaitu kampus Meruya Jakarta Barat, Kampus Menteng Jakarta Pusat, Kampus Warung Buncit Jakarta Selatan. </p>
                     </div>
-                </div>
+                </motion.div>
 
                 <Swiper
 

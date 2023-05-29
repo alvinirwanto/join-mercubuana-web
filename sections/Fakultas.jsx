@@ -1,5 +1,7 @@
 import TitleSection from '../components/TitleSection'
 
+import { motion } from 'framer-motion'
+
 import { Link } from 'react-scroll'
 
 import { BiBrain, BiLaptop, BiLineChart, BiPalette, BiPodcast } from 'react-icons/bi'
@@ -8,24 +10,45 @@ import ProdiItem from '../components/ProdiItem'
 import { faculties } from '../data/DataFakultas'
 import { GiGears } from 'react-icons/gi'
 import Image from 'next/image'
+import { slideIn, staggerAnimation, staggerItems } from '../utils/motion'
 
 const Fakultas = () => {
 
     return (
         <div name='fakultas' className='primary-padding py-[10rem]'>
-            <TitleSection
-                subtitle='Fakultas & Program Studi'
-                title='Universitas Mercu Buana'
-            />
+
+            <motion.div
+                variants={slideIn('up', 0, 0.5)}
+                initial='hidden'
+                whileInView='show'
+            >
+                <TitleSection
+                    subtitle='Fakultas & Program Studi'
+                    title='Universitas Mercu Buana'
+                />
+            </motion.div>
 
             <div name='faculty-section' className='mt-[5rem] py-[3rem] gap-9'>
 
-                <div className="px-[.5rem] md:px-[2rem] p-4 flex flex-col gap-[10rem]">
-
+                <motion.div
+                    variants={staggerAnimation}
+                    initial='hidden'
+                    whileInView='show'
+                    viewport={{ once: true }}
+                    className="px-[.5rem] md:px-[2rem] p-4 flex flex-col gap-[10rem]"
+                >
                     {
                         faculties.map((faculty, i) => (
-
-                            <div key={i} className='w-full'>
+                            <motion.div
+                                variants={staggerItems('up')}
+                                viewport={{ once: true }}
+                                transition={{
+                                    delay: i * 0.3,
+                                    stiffness: '100',
+                                    type: 'tween',
+                                }}
+                                key={i} className='w-full'
+                            >
                                 <div className='flex flex-col gap-5 md:flex-row justify-between items-center'>
                                     <h2 className='order-2 md:order-1 text-3xl xl:text-4xl font-semibold text-primary-blue text-center md:text-right'>
                                         {faculty.facultyName}
@@ -64,13 +87,13 @@ const Fakultas = () => {
                                     </div>
                                 </div>
 
-                            </div>
+                            </motion.div>
 
                         ))
                     }
-                </div>
+                </motion.div>
             </div>
-        </div>
+        </div >
     )
 }
 

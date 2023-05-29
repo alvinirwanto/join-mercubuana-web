@@ -3,6 +3,9 @@ import { BiX } from 'react-icons/bi'
 import { useBrosurStore } from '../store/state'
 import Image from 'next/image'
 
+import { motion } from 'framer-motion'
+import { zoomIn } from '../utils/motion'
+
 export default function ModalBrosur() {
 
     const { brosur, closeBrosur } = useBrosurStore(state => state)
@@ -10,7 +13,13 @@ export default function ModalBrosur() {
     return (
         // ======== Unduh Brosur =======
         <div className={`w-full h-full bg-[#00000092] fixed z-[400] ${brosur === true ? 'grid' : 'hidden'} place-items-center`}>
-            <div className='bg-white w-[95%] md:w-[80%] xl:w-[55%] py-8 px-6 md:px-8 xl:px-10 rounded-md'>
+
+            <motion.div
+                variants={zoomIn(0.1, 0.2)}
+                initial='hidden'
+                animate='show'
+                className='bg-white w-[95%] md:w-[80%] xl:w-[55%] py-8 px-6 md:px-8 xl:px-10 rounded-md'
+            >
                 <div className='flex justify-end text-black mb-8'>
                     <BiX onClick={() => closeBrosur()} className='text-3xl cursor-pointer' />
                 </div>
@@ -41,7 +50,7 @@ export default function ModalBrosur() {
                         />
                     </div>
                 </div>
-            </div>
+            </motion.div>
         </div>
     )
 }
