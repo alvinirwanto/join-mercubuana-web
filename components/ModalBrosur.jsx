@@ -1,6 +1,7 @@
 import React from 'react'
 import { BiX } from 'react-icons/bi'
 import { useBrosurStore } from '../store/state'
+import Image from 'next/image'
 
 export default function ModalBrosur() {
 
@@ -15,10 +16,10 @@ export default function ModalBrosur() {
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-8">
                     <div className='col-start-1 col-end-8 md:col-end-6 grid-rows-1 row-start-1 flex flex-col gap-8 z-[2]'>
-                        <img
+                        <Image
                             src='/logo/logo-umb-full.png'
-                            // width={500}
-                            // height={500}
+                            width={500}
+                            height={500}
                             className='object-contain w-[5rem]'
                         />
                         <div>
@@ -32,8 +33,10 @@ export default function ModalBrosur() {
                     <div className='col-start-1 md:col-start-4 col-end-9 grid-rows-1 row-start-1 z-[1] relative grid place-items-center'>
                         <div className='rotate-6 z-[2] bg-gradient-to-r from-[#ffffffe1] via-[#ffffffdc] to-transparent w-full h-full absolute top-0'></div>
 
-                        <img
+                        <Image
                             src='/brosur.png'
+                            width={500}
+                            height={500}
                             className='z-[1] w-[90%] object-contain shadow-md rotate-6 border-[1px]'
                         />
                     </div>

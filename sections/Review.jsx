@@ -77,7 +77,13 @@ const Review = () => {
                             <SwiperSlide className='' key={item.id}>
                                 <div className='shadow-lg border-[1px] rounded-lg border-gray-200 flex flex-col justify-between xl:flex-row m-4 md:m-0 xl:m-2 gap-6 px-8 xl:px-[3rem] py-[3rem] h-[65vh] md:h-[50vh] xl:h-[40vh]'>
 
-                                    <img src={item.image} alt="profile-img" className='h-[7rem] w-[7rem] xl:h-[9rem] xl:w-[9rem] rounded-full object-cover mb-4 border-[1px] self-center' />
+                                    <Image
+                                        src={item.image}
+                                        width={900}
+                                        height={900}
+                                        alt="profile-img"
+                                        className='h-[7rem] w-[7rem] xl:h-[9rem] xl:w-[9rem] rounded-full object-cover mb-4 border-[1px] self-center'
+                                    />
 
                                     <div className='flex flex-col justify-between gap-4'>
                                         <p className='text-gray-500'>{item.description}</p>
