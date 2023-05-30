@@ -29,6 +29,10 @@ body {
   box-sizing: border-box;
 }
 
+.active {
+    @apply font-bold
+}
+
 .swiper-pagination-bullet {
   background-color: transparent !important;
   border: 1px solid rgba(255, 255, 255, 0.568);

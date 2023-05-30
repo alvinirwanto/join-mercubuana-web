@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { Link } from 'react-scroll';
 
 import Image from 'next/image'
@@ -9,8 +9,31 @@ import { BiX } from 'react-icons/bi'
 import { BsWhatsapp } from 'react-icons/bs'
 import ModalBrosur from './ModalBrosur';
 import { useBrosurStore } from '../store/state';
-import { staggerAnimation, staggerItems, zoomIn } from '../utils/motion';
+import { slideIn, staggerAnimation, staggerItems, zoomIn } from '../utils/motion';
 
+
+const linkNav = [
+    {
+        link: 'home',
+        title: 'Home'
+    },
+    {
+        link: 'fakultas',
+        title: 'Fakultas'
+    },
+    {
+        link: 'tentang',
+        title: 'Tentang UMB'
+    },
+    {
+        link: 'alur-penerimaan',
+        title: 'Alur Penerimaan'
+    },
+    {
+        link: 'faq',
+        title: 'FAQ'
+    }
+]
 
 const Navbar = () => {
 
@@ -30,7 +53,8 @@ const Navbar = () => {
     useEffect(() => {
         window.addEventListener('scroll', addShadowNav)
         return () => window.removeEventListener('scroll', addShadowNav);
-    })
+    }, [])
+
 
 
     return (
@@ -52,60 +76,32 @@ const Navbar = () => {
                 </motion.div>
 
 
-                <motion.div
+                <motion.ul
                     variants={staggerAnimation()}
                     initial='hidden'
                     whileInView='show'
-                    className={`flex justify-center items-center gap-6 xl:gap-[3rem] text-base font-medium ${shadowNav ? 'text-primary-blue' : 'text-white'}`}>
+                    className={`flex justify-center items-center gap-6 xl:gap-[3rem] text-base font-medium ${shadowNav ? 'text-primary-blue' : 'text-white'}`}
+                >
 
-                    <motion.div
-                        variants={staggerItems('down')}
-                        transition={{ duration: 0.2 }}
-                        className='hidden xl:block cursor-pointer'
-                    >
-                        <Link to='home' >
-                            Home
-                        </Link>
-                    </motion.div>
-
-                    <motion.div
-                        variants={staggerItems('down')}
-                        transition={{ duration: 0.2 }}
-                        className='hidden xl:block cursor-pointer'
-                    >
-                        <Link to='fakultas' >
-                            Fakultas
-                        </Link>
-                    </motion.div>
-                    <motion.div
-                        variants={staggerItems('down')}
-                        transition={{ duration: 0.2 }}
-                        className='hidden xl:block cursor-pointer'
-                    >
-                        <Link to='tentang' offset={-110} >
-                            Tentang UMB
-                        </Link>
-                    </motion.div>
-
-                    <motion.div
-                        variants={staggerItems('down')}
-                        transition={{ duration: 0.2 }}
-                        className='hidden xl:block cursor-pointer'
-                    >
-                        <Link to='alur-penerimaan' offset={-100} >
-                            Alur Penerimaan
-                        </Link>
-                    </motion.div>
-
-                    <motion.div
-                        variants={staggerItems('down')}
-                        transition={{ duration: 0.2 }}
-                        className='hidden xl:block cursor-pointer'
-                    >
-                        <Link to='faq' offset={-100} >
-                            FAQ
-                        </Link>
-                    </motion.div>
+                    {
+                        linkNav.map((nav, i) => (
+                            <motion.li
+                                variants={staggerItems('down')}
+                                transition={{ duration: 0.2 }}
+                                key={i}
+                                className={`hidden xl:block cursor-pointer`}
+                            >
+                                <Link
+                                    to={nav.link}
+                                    offset={nav.link === 'fakultas' || nav.link === 'tentang' ? 0 : -100}
+                                    activeClass='active'
+                                    spy={true}
+                                >
+                                    {nav.title}
+                                </Link>
+                            </motion.li>
+                        ))
+                    }
 
                     <motion.button
                         variants={staggerItems('down')}
@@ -118,43 +114,41 @@ const Navbar = () => {
                     </motion.button>
 
                     <HiOutlineMenu onClick={() => setShowNav(true)} className='xl:hidden text-3xl' />
-                </motion.div>
+                </motion.ul>
             </nav>
 
 
             {/* ======= Mobile and Tablet ======== */}
-            <div className={`${showNav ? 'block' : 'hidden'} xl:hidden z-[500] bg-[#fffffff2] text-black rounded-md w-screen h-screen fixed py-10 px-6 md:px-9`}>
+            <motion.div
+                variants={zoomIn(0.1, 0.5)}
+                initial='hidden'
+                animate='show'
+                className={`${showNav ? 'block' : 'hidden'} xl:hidden z-[500] bg-[#fffffff2] text-black rounded-md w-screen h-screen fixed py-10 px-6 md:px-9`}
+            >
                 <div className='flex justify-end text-black mb-8'>
                     <BiX onClick={() => setShowNav(false)} className='text-4xl' />
                 </div>
                 <ul className='text-2xl md:text-4xl font-semibold flex flex-col justify-center h-full gap-8'>
-                    <li>
-                        <Link to='home' onClick={() => setShowNav(false)} >
-                            Home
-                        </Link>
-                    </li>
-                    <li>
-                        <Link to='fakultas' onClick={() => setShowNav(false)} >
-                            Fakultas
-                        </Link>
-                    </li>
-                    <li>
-                        <Link to='tentang' offset={-110} onClick={() => setShowNav(false)} >
-                            Tentang UMB
-                        </Link>
-                    </li>
-                    <li>
-                        <Link to='alur-penerimaan' offset={-100} onClick={() => setShowNav(false)} >
-                            Alur Penerimaan
-                        </Link>
-                    </li>
-                    <li>
-                        <Link to='faq' offset={-100} onClick={() => setShowNav(false)} >
-                            FAQ
-                        </Link>
-                    </li>
+                    {
+                        linkNav.map((nav, i) => (
+                            <li key={i}>
+                                <Link
+                                    to={nav.link}
+                                    onClick={() => setShowNav(false)}
+                                    offset={
+                                        nav.link === 'tentang' ? -110
+                                            : nav.link === 'alur-penerimaan' || nav.link === 'faq' ? -100
+                                                : 0
+                                    }
+                                >
+                                    {nav.title}
+                                </Link>
+                            </li>
+                        ))
+                    }
+
                 </ul>
-            </div>
+            </motion.div>
 
             <a
                 href='https://wa.me/6281513113331'

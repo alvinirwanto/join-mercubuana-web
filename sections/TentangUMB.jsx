@@ -75,7 +75,7 @@ const TentangUMB = () => {
         [swiper, realSlide]
     )
     return (
-        <div name='tentang' className="w-full primary-padding mt-[5rem]">
+        <div name='tentang' className="w-full primary-padding pt-[10rem]">
 
             <motion.div
                 variants={slideIn('up', 0, 0.5)}

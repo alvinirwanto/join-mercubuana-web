@@ -18,24 +18,6 @@ export const slideIn = (direction, delay, duration) => ({
     },
 });
 
-
-// export const slideUp = (delay, duration) => ({
-//     hidden: {
-//         opacity: 0,
-//         y: '100%'
-//     },
-//     show: {
-//         opacity: 1,
-//         y: 0,
-//         transition: {
-//             stiffness: '100',
-//             delay,
-//             duration,
-//             ease: 'easeOut',
-//         },
-//     },
-// });
-
 export const zoomIn = (delay, duration) => ({
     hidden: {
         scale: 0,
