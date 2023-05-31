@@ -59,10 +59,15 @@ const Navbar = () => {
 
     return (
         <>
-            <nav className={`${shadowNav ? 'shadow-md bg-white duration-300' : 'shadow-none bg-gradient-to-b from-[#000000bc] via-[#0000006c] to-[#113dec01] duration-300'} duration-300 w-full primary-padding flex justify-between items-center fixed top-0 z-[100]`}>
+            <motion.nav
+                variants={slideIn('bottom', 0, 0.1)}
+                initial='hidden'
+                whileInView='show'
+                className={`${shadowNav ? 'shadow-md bg-white duration-300' : 'shadow-none bg-gradient-to-b from-[#000000bc] via-[#0000006c] to-[#113dec01] duration-300'} duration-300 w-full primary-padding flex justify-between items-center fixed top-0 z-[100]`}
+            >
 
                 <motion.div
-                    variants={zoomIn(0, 0.5)}
+                    variants={zoomIn(0, 0.2)}
                     initial='hidden'
                     whileInView='show'
                 >
@@ -115,7 +120,7 @@ const Navbar = () => {
 
                     <HiOutlineMenu onClick={() => setShowNav(true)} className='xl:hidden text-3xl' />
                 </motion.ul>
-            </nav>
+            </motion.nav>
 
 
             {/* ======= Mobile and Tablet ======== */}
