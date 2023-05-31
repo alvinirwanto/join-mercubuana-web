@@ -2,9 +2,6 @@ import React from 'react'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 
-import HeroBg from '../public/umb.png'
-import HeroImg from '../public/student.png'
-
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
@@ -15,7 +12,7 @@ import "swiper/css/pagination";
 
 
 import { Pagination, Autoplay } from "swiper";
-import { opacityIn, slideIn, slideUp, zoomIn } from '../utils/motion';
+import { opacityIn } from '../utils/motion';
 
 const items = [
     {
