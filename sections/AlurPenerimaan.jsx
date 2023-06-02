@@ -1,8 +1,13 @@
 import React from 'react'
-import TitleSection from '../components/TitleSection'
 
 import { motion } from 'framer-motion'
 import { slideIn, zoomIn } from '../utils/motion'
+
+import dynamic from 'next/dynamic'
+
+const TitleSection = dynamic(() => import('../components/TitleSection'), {
+    ssr: false
+})
 
 const steps = [
     {

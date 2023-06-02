@@ -7,9 +7,14 @@ import { motion } from 'framer-motion'
 import { HiDownload, HiOutlineMenu } from 'react-icons/hi'
 import { BiX } from 'react-icons/bi'
 import { BsWhatsapp } from 'react-icons/bs'
-import ModalBrosur from './ModalBrosur';
 import { useBrosurStore } from '../store/state';
 import { slideIn, staggerAnimation, staggerItems, zoomIn } from '../utils/motion';
+
+import dynamic from 'next/dynamic';
+
+const ModalBrosur = dynamic(() => import('../components/ModalBrosur'), {
+    ssr: false
+})
 
 
 const linkNav = [
@@ -81,7 +86,7 @@ const Navbar = () => {
                 </motion.div>
 
 
-                <motion.ul
+                <motion.div
                     variants={staggerAnimation()}
                     initial='hidden'
                     whileInView='show'
@@ -90,7 +95,7 @@ const Navbar = () => {
 
                     {
                         linkNav.map((nav, i) => (
-                            <motion.li
+                            <motion.div
                                 variants={staggerItems('down')}
                                 transition={{ duration: 0.2 }}
                                 key={i}
@@ -104,7 +109,7 @@ const Navbar = () => {
                                 >
                                     {nav.title}
                                 </Link>
-                            </motion.li>
+                            </motion.div>
                         ))
                     }
 
@@ -112,6 +117,7 @@ const Navbar = () => {
                         variants={staggerItems('down')}
                         transition={{ duration: 0.2 }}
                         onClick={() => showBrosur()}
+                        aria-label="unduh brosur"
                         className={`flex justify-center items-center text-sm xl:text-lg font-semibold gap-2 px-4 py-3 rounded-md duration-200 ${shadowNav ? 'bg-primary-blue text-white hover:opacity-80' : 'bg-white text-primary-blue hover:bg-primary-blue hover:text-white'} `}
                     >
                         <HiDownload />
@@ -119,7 +125,7 @@ const Navbar = () => {
                     </motion.button>
 
                     <HiOutlineMenu onClick={() => setShowNav(true)} className='xl:hidden text-3xl' />
-                </motion.ul>
+                </motion.div>
             </motion.nav>
 
 
@@ -133,10 +139,10 @@ const Navbar = () => {
                 <div className='flex justify-end text-black mb-8'>
                     <BiX onClick={() => setShowNav(false)} className='text-4xl' />
                 </div>
-                <ul className='text-2xl md:text-4xl font-semibold flex flex-col justify-center h-full gap-8'>
+                <div className='text-2xl md:text-4xl font-semibold flex flex-col justify-center h-full gap-8'>
                     {
                         linkNav.map((nav, i) => (
-                            <li key={i}>
+                            <div key={i}>
                                 <Link
                                     to={nav.link}
                                     onClick={() => setShowNav(false)}
@@ -148,15 +154,17 @@ const Navbar = () => {
                                 >
                                     {nav.title}
                                 </Link>
-                            </li>
+                            </div>
                         ))
                     }
 
-                </ul>
+                </div>
             </motion.div>
 
             <a
                 href='https://wa.me/6281513113331'
+                aria-label="WhatsApp"
+                title='hubungi lewat wa'
                 target='_blank'
                 className="z-[400] fixed bottom-6 xl:bottom-10 right-4 xl:right-10 bg-[#23C467] text-white text-4xl p-4 rounded-full"
             >

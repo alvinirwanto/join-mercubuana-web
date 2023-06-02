@@ -3,9 +3,14 @@ import { HiDownload } from "react-icons/hi";
 import { motion } from "framer-motion";
 
 import Image from "next/image";
-import ModalBrosur from "../components/ModalBrosur";
 import { useBrosurStore } from "../store/state";
 import { slideIn, zoomIn } from "../utils/motion";
+
+import dynamic from 'next/dynamic';
+
+const ModalBrosur = dynamic(() => import('../components/ModalBrosur'), {
+    ssr: false
+})
 
 const UnduhBrosur = () => {
 
@@ -42,6 +47,7 @@ const UnduhBrosur = () => {
                             </motion.h2>
 
                             <motion.button
+                                aria-label="unduh brosur"
                                 variants={zoomIn(0, 0.3)}
                                 initial='hidden'
                                 whileInView='show'

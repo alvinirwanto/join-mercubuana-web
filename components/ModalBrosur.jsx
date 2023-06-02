@@ -27,6 +27,7 @@ export default function ModalBrosur() {
                     <div className='col-start-1 col-end-8 md:col-end-6 grid-rows-1 row-start-1 flex flex-col gap-8 z-[2]'>
                         <Image
                             src='/logo/logo-umb-full.png'
+                            alt='logo'
                             width={500}
                             height={500}
                             className='object-contain w-[5rem]'
@@ -34,7 +35,7 @@ export default function ModalBrosur() {
                         <div>
                             <span className='text-3xl font-semibold'>Unduh brosur sekarang</span>
                             <p className='text-base'>Isi data diri Anda di bawah ini untuk dapatkan brosur seputar informasi Universitas Mercu Buana</p>
-                            <iframe className='w-full h-[20rem] -ml-4 md:-ml-6' src="https://omni.mercubuana.ac.id/crm-mx/crm-app/forms/wtl/a06697d979a8c6dad5060b086994ee1c" frameBorder="0" sandbox="allow-top-navigation allow-scripts allow-forms allow-same-origin" allowFullScreen></iframe>
+                            <iframe title='form browsur' className='w-full h-[20rem] -ml-4 md:-ml-6' src="https://omni.mercubuana.ac.id/crm-mx/crm-app/forms/wtl/a06697d979a8c6dad5060b086994ee1c" frameBorder="0" sandbox="allow-top-navigation allow-scripts allow-forms allow-same-origin" allowFullScreen></iframe>
                         </div>
 
                     </div>
@@ -44,6 +45,7 @@ export default function ModalBrosur() {
 
                         <Image
                             src='/brosur.png'
+                            alt='brosur'
                             width={500}
                             height={500}
                             className='z-[1] w-[90%] object-contain shadow-md rotate-6 border-[1px]'

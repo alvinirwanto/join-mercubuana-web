@@ -5,10 +5,15 @@ import Image from "next/image";
 import IconAkreditasi from '../public/award.svg'
 import IconHour from '../public/clock-nine.svg'
 import IconBill from '../public/bill.svg'
-import TitleSection from "../components/TitleSection";
 
-import { delay, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { slideIn, staggerAnimation, staggerItems } from "../utils/motion";
+
+import dynamic from 'next/dynamic'
+
+const TitleSection = dynamic(() => import('../components/TitleSection'), {
+    ssr: false
+})
 
 const listReasonKK = [
     {
@@ -62,7 +67,11 @@ const MengapaMemilihKK = () => {
                             }}
                             key={reason.id} className="grid grid-cols-[1fr_5fr] gap-4 p-4"
                         >
-                            <Image src={reason.img} className="w-[5rem] aspect-square self-start" alt="icon" />
+                            <Image
+                                src={reason.img}
+                                className="w-[5rem] aspect-square self-start"
+                                alt="icon"
+                            />
                             <div className="flex flex-col gap-4 mt-2">
                                 <h2 className="font-semibold text-xl text-primary-blue">{reason.title}</h2>
                                 <p>{reason.content}</p>

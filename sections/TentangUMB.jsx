@@ -12,14 +12,17 @@ import "swiper/css/pagination";
 // import required modules
 import { Pagination, Autoplay } from "swiper";
 
-import TitleSection from "../components/TitleSection";
-
 import { BsPlayCircleFill } from 'react-icons/bs'
 import { BiX } from 'react-icons/bi'
 import { RiArrowLeftSLine, RiArrowRightSLine } from "react-icons/ri";
 import { slideIn, zoomIn } from "../utils/motion";
 
-// import CampusImg from '../public'
+
+import dynamic from 'next/dynamic'
+
+const TitleSection = dynamic(() => import('../components/TitleSection'), {
+    ssr: false
+})
 
 
 const images = [
@@ -129,11 +132,11 @@ const TentangUMB = () => {
                 : "hidden"}>
                 <div className="flex flex-col md:flex-row items-start gap-4 w-[95%] md:w-[85%] xl:w-[70%]">
                     <iframe
+                        title="YouTube video player"
                         className="w-full aspect-video order-2 md:order-1"
                         src={showVideo ? "https://www.youtube.com/embed/-_sIStXUSBw?autoplay=1" : ""}
                         allow='autoplay'
                         allowFullScreen
-                        title="YouTube video player"
                     />
                     <div
                         onClick={() => { setShowVideo(false) }}
@@ -210,6 +213,7 @@ const TentangUMB = () => {
                 {/* ===== Navigation ====== */}
                 <div className={`flex justify-end w-full gap-2 z-50`}>
                     <button
+                        aria-label="button-prev"
                         onClick={fnPrev}
                         className={`bg-primary-blue p-2 rounded-full shadow-lg ml-4 text-white`}
                     >
@@ -217,6 +221,7 @@ const TentangUMB = () => {
                     </button>
 
                     <button
+                        aria-label="button-next"
                         onClick={fnNext}
                         className={`bg-primary-blue p-2 rounded-full shadow-lg mr-2 text-white`}
                     >

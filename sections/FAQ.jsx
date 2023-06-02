@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import TitleSection from '../components/TitleSection'
 
 import * as Accordion from '@radix-ui/react-accordion'
 import { ChevronDownIcon } from '@radix-ui/react-icons';
@@ -7,6 +6,12 @@ import classNames from 'classnames'
 
 import { motion } from 'framer-motion';
 import { slideIn } from '../utils/motion';
+
+import dynamic from 'next/dynamic'
+
+const TitleSection = dynamic(() => import('../components/TitleSection'), {
+    ssr: false
+})
 
 
 const lists = [
@@ -156,14 +161,20 @@ const FAQ = () => {
                                 <div className='ml-8 flex flex-col gap-2'>
                                     <p className='font-semibold text-lg -ml-8'>Program Sarjana (S1)</p>
                                     <ul className='list-outside list-disc flex flex-col gap-4'>
-                                        <li>Lulusan SMA / K <br />
-                                            Uang pangkal: Rp 18.500.000-, <br />
-                                            Uang kuliah per semester: Rp 9.360.000-,
-                                        </li>
+                                        <li><span className='font-semibold'>Lulusan SMA / K</span> <br />
+                                            Uang pangkal Rp 20.475.000-, <br /> 
+                                            Untuk Bidang Studi Broadcasting Rp 21.675.000 <br /><br />
+
+                                            Uang kuliah per semester Rp. 10.080.000, <br />
+                                            Untuk Bidang Studi Broadcasting Rp. 12.960.000 
+                                        </li><br />
                                         <li>
-                                            Lulusan D3/Politeknik/Akademi/Sederajat <br />
-                                            Uang pangkal: Rp 18.500.000-, <br />
-                                            Uang kuliah per semester: Rp 9.360.000-,
+                                            <span className='font-semibold'>Lulusan D3/Politeknik/Akademi/Sederajat</span> <br />
+                                            Uang pangkal Rp 20.475.000-, <br /> 
+                                            Untuk Bidang Studi Broadcasting Rp 21.675.000 <br /><br />
+
+                                            Uang kuliah per semester Rp. 10.080.000, <br />
+                                            Untuk Bidang Studi Broadcasting Rp. 12.960.000 
                                         </li>
                                     </ul>
                                 </div>
@@ -171,16 +182,16 @@ const FAQ = () => {
                                 <div className='ml-8 flex flex-col gap-2'>
                                     <p className='font-semibold text-lg -ml-8'>Program Pasca Sarjana (S2)</p>
                                     <ul className='list-outside list-disc flex flex-col gap-4'>
-                                        <li>Uang Pangkal: Rp 17.500.000-, </li>
-                                        <li>Spp per semester: Rp 10.000.000-, </li>
-                                        <li>Program magister akuntansi, magister teknik industri, magister teknik elektro, magister ilmu komunikasi <br />
-                                            Uang pangkal: Rp 16.500.000-, <br />
-                                            Spp per semester: Rp 8.200.000-,
+                                        <li>Uang Pangkal: Rp 18.500.000-, </li>
+                                        <li>SPP per semester: Rp 10.800.000-, </li>
+                                        <li className='capitalize'>Program magister akuntansi, magister teknik industri, magister teknik elektro, magister ilmu komunikasi <br />
+                                            Uang pangkal: Rp 17.800.000-, <br />
+                                            SPP per semester: Rp 9.600.000-,
                                         </li>
                                         <li>
                                             Program magister teknik sipil, magister teknik mesin <br />
-                                            Uang pangkal: Rp 15.000.000-, <br />
-                                            Spp per semester: Rp 8.500.000-,
+                                            Uang pangkal: Rp 16.500.000-, <br />
+                                            SPP per semester: Rp 9.200.000-,
                                         </li>
                                     </ul>
                                 </div>

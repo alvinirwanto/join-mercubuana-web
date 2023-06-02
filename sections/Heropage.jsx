@@ -1,6 +1,5 @@
 import React from 'react'
 import Image from 'next/image'
-import { motion } from 'framer-motion'
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -12,7 +11,6 @@ import "swiper/css/pagination";
 
 
 import { Pagination, Autoplay } from "swiper";
-import { opacityIn } from '../utils/motion';
 
 const items = [
     {
@@ -61,7 +59,9 @@ const Heropage = () => {
                                 <Image
                                     width={1200}
                                     height={1200}
-                                    src={`/hero/${item.image}`} alt="image" className="object-cover w-full h-full"
+                                    src={`/hero/${item.image}`}
+                                    alt="image"
+                                    className="object-cover w-full h-full"
                                     priority
                                 />
                             </div>
@@ -71,7 +71,9 @@ const Heropage = () => {
                                 <Image
                                     width={1200}
                                     height={1200}
-                                    src={`/hero/${item.image_md}`} alt="image" className="!object-cover !w-full !h-full"
+                                    src={`/hero/${item.image_md}`}
+                                    alt="image"
+                                    className="!object-cover !w-full !h-full"
                                     priority
                                 />
                             </div>
@@ -81,7 +83,9 @@ const Heropage = () => {
                                 <Image
                                     width={1200}
                                     height={1200}
-                                    src={`/hero/${item.image_sm}`} alt="image" className="object-cover w-full h-full"
+                                    src={`/hero/${item.image_sm}`}
+                                    alt="image"
+                                    className="object-cover w-full h-full"
                                     priority
                                 />
                             </div>
@@ -89,13 +93,7 @@ const Heropage = () => {
                     ))
                 }
 
-                <motion.div
-                    variants={opacityIn(0.2, 0.5)}
-                    initial='hidden'
-                    whileInView='show'
-                    viewport={{ once: true }}
-                    className='hidden md:block'
-                >
+                <div className='hidden md:block'>
                     <div className='absolute bottom-[3rem] md:right-10 xl:top-[8rem] xl:right-[5rem] w-[95vw] md:max-w-[70vw] xl:max-w-[38vw] z-[20]'>
                         <div className='border-[1px] shadow-md rounded-lg p-8 xl:p-[3rem] bg-white flex flex-col gap-4'>
                             <div>
@@ -110,6 +108,7 @@ const Heropage = () => {
                                 <iframe
                                     height="850"
                                     className='max-h-[20rem]'
+                                    title='form daftar'
                                     src="https://omni.mercubuana.ac.id/crm-mx/crm-app/forms/wtl/77e6c3eac6ff3a5bf2b9ae14c5a4872c"
                                     frameBorder="0"
                                     sandbox="allow-top-navigation allow-scripts allow-forms allow-same-origin"
@@ -118,7 +117,7 @@ const Heropage = () => {
                             </div>
                         </div>
                     </div>
-                </motion.div>
+                </div>
 
             </Swiper>
 
@@ -138,6 +137,7 @@ const Heropage = () => {
                             </p>
                             <iframe
                                 height="850"
+                                title='form daftar'
                                 className='max-h-[20rem]'
                                 src="https://omni.mercubuana.ac.id/crm-mx/crm-app/forms/wtl/77e6c3eac6ff3a5bf2b9ae14c5a4872c"
                                 frameBorder="0"

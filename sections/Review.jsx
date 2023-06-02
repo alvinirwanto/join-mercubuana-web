@@ -1,5 +1,4 @@
 import React, { useRef, useState } from "react";
-import TitleSection from '../components/TitleSection'
 
 import Image from 'next/image';
 import { testimonial } from '../data/DataTestimonial'
@@ -17,6 +16,12 @@ import "swiper/css/navigation";
 import { Autoplay, Pagination } from "swiper";
 import { RiArrowLeftSLine, RiArrowRightSLine } from "react-icons/ri";
 import { slideIn } from "../utils/motion";
+
+import dynamic from 'next/dynamic'
+
+const TitleSection = dynamic(() => import('../components/TitleSection'), {
+    ssr: false
+})
 
 const Review = () => {
 
@@ -109,6 +114,7 @@ const Review = () => {
             {/* ===== Navigation ====== */}
             <div className={`flex justify-end w-full gap-2 z-50 mt-8 pr-2 md:pr-0`}>
                 <button
+                aria-label="button-prev"
                     onClick={fnPrev}
                     className={`bg-black p-2 rounded-full shadow-lg ml-4 text-white`}
                 >
@@ -116,6 +122,7 @@ const Review = () => {
                 </button>
 
                 <button
+                aria-label="button-next"
                     onClick={fnNext}
                     className={`bg-black p-2 rounded-full shadow-lg mr-2 text-white`}
                 >

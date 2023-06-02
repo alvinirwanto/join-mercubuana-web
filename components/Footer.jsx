@@ -6,7 +6,7 @@ import { zoomIn } from '../utils/motion'
 
 export default function Footer() {
     return (
-        <>
+        <footer>
             <div className='bg-[#E5E7E9] w-full px-4 xl:px-[3rem] py-[5rem] flex flex-col gap-10 items-center'>
                 <motion.div
                     variants={zoomIn(0, 0.5)}
@@ -47,6 +47,6 @@ export default function Footer() {
                     Copyright © {new Date().getFullYear()} All rights reserved | Admisi dan Promosi Universitas Mercu Buana
                 </motion.p>
             </div>
-        </>
+        </footer>
     )
 }

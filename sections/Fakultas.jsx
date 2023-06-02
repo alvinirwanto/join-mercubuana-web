@@ -1,16 +1,17 @@
-import TitleSection from '../components/TitleSection'
-
 import { motion } from 'framer-motion'
-
-import { Link } from 'react-scroll'
+import Image from 'next/image'
+import { faculties } from '../data/DataFakultas'
 
 import { BiBrain, BiLaptop, BiLineChart, BiPalette, BiPodcast } from 'react-icons/bi'
-import ProdiItem from '../components/ProdiItem'
-
-import { faculties } from '../data/DataFakultas'
 import { GiGears } from 'react-icons/gi'
-import Image from 'next/image'
+
 import { slideIn, staggerAnimation, staggerItems } from '../utils/motion'
+
+import dynamic from 'next/dynamic'
+
+const TitleSection = dynamic(() => import('../components/TitleSection'), {
+    ssr: false
+})
 
 const Fakultas = () => {
 

@@ -18,6 +18,7 @@ const MengapaMemilihUMB = () => {
             <div className="relative h-[130vh] md:h-[110vh] rounded-lg overflow-clip">
                 <Image
                     src='/campus-2.png'
+                    alt='campus'
                     width={1000}
                     height={1000}
                     className='w-full h-full object-cover'
@@ -30,7 +31,7 @@ const MengapaMemilihUMB = () => {
                         whileInView='show'
                         className="max-w-[700px]"
                     >
-                        <h4 className="text-2xl md:text-4xl font-semibold">Mengapa Memilih Kelas Karyawan Universitas Mercu Buana Sebagai Tempat Kuliah yang Tepat dan Terbaik?</h4>
+                        <h2 className="text-2xl md:text-4xl font-semibold">Mengapa Memilih Kelas Karyawan Universitas Mercu Buana Sebagai Tempat Kuliah yang Tepat dan Terbaik?</h2>
                     </motion.div>
 
                     <motion.div
