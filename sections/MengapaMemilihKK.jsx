@@ -2,10 +2,6 @@ import React from "react";
 
 import Image from "next/image";
 
-import IconAkreditasi from '../public/award.svg'
-import IconHour from '../public/clock-nine.svg'
-import IconBill from '../public/bill.svg'
-
 import { motion } from "framer-motion";
 import { slideIn, staggerAnimation, staggerItems } from "../utils/motion";
 
@@ -18,19 +14,19 @@ const TitleSection = dynamic(() => import('../components/TitleSection'), {
 const listReasonKK = [
     {
         id: 1,
-        img: IconAkreditasi,
+        img: '/award.svg',
         title: 'Terakreditasi BAN-PT',
         content: 'Seluruh program studi unggulan di kelas karyawan Universitas Mercu Buana telah terakreditasi BAN-PT'
     },
     {
         id: 2,
-        img: IconBill,
+        img: '/bill.svg',
         title: 'Biaya Kuliah Sesuai Kualitas',
         content: 'Biaya perkuliahan sesuai dengan kualitas yang dirancang sama dengan program reguler dengan kemudahan skema pembayaran yang mudah'
     },
     {
         id: 3,
-        img: IconHour,
+        img: '/clock-nine.svg',
         title: 'Waktu Kuliah Fleksibel',
         content: 'Di kelas karyawan, Anda dapat memilih waktu kuliah yang dapat disesuaikan dengan pekerjaan Anda'
     },
@@ -69,6 +65,8 @@ const MengapaMemilihKK = () => {
                         >
                             <Image
                                 src={reason.img}
+                                width={500}
+                                height={500}
                                 className="w-[5rem] aspect-square self-start"
                                 alt="icon"
                             />
