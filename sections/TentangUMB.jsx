@@ -19,6 +19,7 @@ import { slideIn, zoomIn } from "../utils/motion";
 
 
 import dynamic from 'next/dynamic'
+import ModalVideo from "../components/ModalVideo";
 
 const TitleSection = dynamic(() => import('../components/TitleSection'), {
     ssr: false
@@ -59,6 +60,8 @@ const images = [
 
 const TentangUMB = () => {
     const [showVideo, setShowVideo] = useState(false)
+    const [showVideo2, setShowVideo2] = useState(false)
+
 
     const [realSlide, setRealSlide] = useState(0)
     const swiper = useRef()
@@ -130,20 +133,11 @@ const TentangUMB = () => {
             <div className={showVideo
                 ? "bg-[#000000d2] fixed flex justify-center items-center z-[100] top-0 left-0 w-full h-screen"
                 : "hidden"}>
-                <div className="flex flex-col md:flex-row items-start gap-4 w-[95%] md:w-[85%] xl:w-[70%]">
-                    <iframe
-                        title="YouTube video player"
-                        className="w-full aspect-video order-2 md:order-1"
-                        src={showVideo ? "https://www.youtube.com/embed/-_sIStXUSBw?autoplay=1" : ""}
-                        allow='autoplay'
-                        allowFullScreen
-                    />
-                    <div
-                        onClick={() => { setShowVideo(false) }}
-                        className="text-white cursor-pointer p-0 order-1 md:order-2 self-end md:self-start">
-                        <BiX className="text-4xl" />
-                    </div>
-                </div>
+
+                <ModalVideo
+                    showVideo={showVideo}
+                    setShowVideo={setShowVideo}
+                />
             </div>
 
             <div className="grid grid-cols-1 xl:grid-cols-[1.5fr_2fr] gap-8 mt-[3rem] px-3 py-8 md:p-[3rem] border-[1px] border-gray-300 rounded-md overflow-clip">
