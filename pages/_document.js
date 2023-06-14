@@ -18,7 +18,7 @@ export default function Document() {
 
                     gtag('js', new Date());
                     gtag('config', 'AW-949610150');
-                    `,
+                    `.trim(),
                     }}
                 </Script>
             </Head>
