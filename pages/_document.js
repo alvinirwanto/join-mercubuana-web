@@ -4,7 +4,8 @@ import Script from 'next/script';
 export default function Document() {
     return (
         <Html lang='en'>
-            <Head>
+            <Head />
+            <body>
                 {/* <!-- Google tag (gtag.js) -->  */}
                 <Script async src="https://www.googletagmanager.com/gtag/js?id=AW-949610150"></Script>
                 <Script>
@@ -21,8 +22,6 @@ export default function Document() {
                     `.trim(),
                     }}
                 </Script>
-            </Head>
-            <body>
                 <Main />
                 <NextScript />
             </body>
