@@ -23,12 +23,12 @@ const linkNav = [
         title: 'Home'
     },
     {
-        link: 'fakultas',
-        title: 'Fakultas'
-    },
-    {
         link: 'tentang',
         title: 'Tentang UMB'
+    },
+    {
+        link: 'fakultas',
+        title: 'Fakultas'
     },
     {
         link: 'alur-penerimaan',

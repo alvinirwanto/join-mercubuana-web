@@ -6,6 +6,10 @@ import Heropage from "../sections/Heropage";
 import { useEffect, useState } from "react";
 
 
+const SelamatDatang = dynamic(() => import('../sections/SelamatDatang'), {
+    ssr: false
+})
+
 const MengapaMemilihKK = dynamic(() => import('../sections/MengapaMemilihKK'), {
     ssr: false
 })
@@ -44,6 +48,7 @@ const Footer = dynamic(() => import('../components/Footer'), {
 
 
 import { ProgressBar } from 'react-loader-spinner'
+import ButtonDaftar from "../components/ButtonDaftar";
 
 export default function Home() {
 
@@ -87,13 +92,16 @@ export default function Home() {
 
                         <main>
                             <Heropage />
+                            <SelamatDatang />
                             <MengapaMemilihKK />
                             <UnduhBrosur />
-                            <Fakultas />
                             <TentangUMB />
-                            <MengapaMemilihUMB />
-                            <AlurPenerimaan />
+                            <Fakultas />
+                            <ButtonDaftar />
+                            {/* <MengapaMemilihUMB /> */}
                             <Review />
+                            <AlurPenerimaan />
+                            <ButtonDaftar />
                             <FAQ />
                         </main>
 

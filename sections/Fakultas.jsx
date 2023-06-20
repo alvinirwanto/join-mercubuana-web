@@ -16,7 +16,7 @@ const TitleSection = dynamic(() => import('../components/TitleSection'), {
 const Fakultas = () => {
 
     return (
-        <div name='fakultas' className='primary-padding py-[10rem]'>
+        <div name='fakultas' className='primary-padding pt-[10rem]'>
 
             <motion.div
                 variants={slideIn('up', 0, 0.5)}
