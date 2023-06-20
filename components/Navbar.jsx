@@ -130,36 +130,40 @@ const Navbar = () => {
 
 
             {/* ======= Mobile and Tablet ======== */}
-            <motion.div
-                variants={zoomIn(0.1, 0.5)}
-                initial='hidden'
-                animate='show'
-                className={`${showNav ? 'block' : 'hidden'} xl:hidden z-[500] bg-[#fffffff2] text-black rounded-md w-screen h-screen fixed py-10 px-6 md:px-9`}
-            >
-                <div className='flex justify-end text-black mb-8'>
-                    <BiX onClick={() => setShowNav(false)} className='text-4xl' />
-                </div>
-                <div className='text-2xl md:text-4xl font-semibold flex flex-col justify-center h-full gap-8'>
-                    {
-                        linkNav.map((nav, i) => (
-                            <div key={i}>
-                                <Link
-                                    to={nav.link}
-                                    onClick={() => setShowNav(false)}
-                                    offset={
-                                        nav.link === 'tentang' ? -110
-                                            : nav.link === 'alur-penerimaan' || nav.link === 'faq' ? -100
-                                                : 0
-                                    }
-                                >
-                                    {nav.title}
-                                </Link>
-                            </div>
-                        ))
-                    }
+            {
+                showNav && (
+                    <motion.div
+                        variants={slideIn('right', 0, 0.3)}
+                        initial='hidden'
+                        animate='show'
+                        className={`z-[500] bg-[#fffffff2] text-black rounded-md w-screen h-screen fixed py-10 px-6 md:px-9`}
+                    >
+                        <div className='flex justify-end text-black mb-8'>
+                            <BiX onClick={() => setShowNav(false)} className='text-4xl' />
+                        </div>
+                        <div className='text-2xl md:text-4xl font-semibold flex flex-col justify-center h-full gap-8'>
+                            {
+                                linkNav.map((nav, i) => (
+                                    <div key={i}>
+                                        <Link
+                                            to={nav.link}
+                                            onClick={() => setShowNav(false)}
+                                            offset={
+                                                nav.link === 'tentang' ? -110
+                                                    : nav.link === 'alur-penerimaan' || nav.link === 'faq' ? -100
+                                                        : 0
+                                            }
+                                        >
+                                            {nav.title}
+                                        </Link>
+                                    </div>
+                                ))
+                            }
 
-                </div>
-            </motion.div>
+                        </div>
+                    </motion.div>
+                )
+            }
 
             <a
                 href='https://wa.me/6281513113331'
