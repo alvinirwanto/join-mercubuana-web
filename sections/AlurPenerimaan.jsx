@@ -61,7 +61,8 @@ const AlurPenerimaan = () => {
             <div className='grid place-items-center mt-[5rem]'>
                 <div className='flex flex-col items-start gap-[10rem] md:gap-[3rem] relative px-4'>
 
-                    <div className='h-[140rem] md:h-[65rem] xl:h-[53rem] w-[2px] opacity-20 md:opacity-100 bg-primary-blue absolute top-0 md:top-[3rem] xl:top-[5rem] left-[50%] md:left-[2.9rem] z-[-1]'></div>
+                    {/* Line */}
+                    <div className='h-[130rem] md:h-[65rem] xl:h-[53rem] w-[2px] opacity-20 md:opacity-100 bg-primary-blue absolute top-0 md:top-[3rem] xl:top-[5rem] left-[50%] md:left-[2.9rem] z-[-1]'></div>
 
                     {
                         steps.map((step) => (

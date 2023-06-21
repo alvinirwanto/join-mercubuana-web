@@ -102,7 +102,7 @@ const FAQ = () => {
 
 
     return (
-        <div name='faq' className='primary-padding my-[10rem]'>
+        <div name='faq' className='primary-padding my-8 xl:my-[10rem]'>
 
             <motion.div
                 variants={slideIn('up', 0, 0.5)}
@@ -114,7 +114,7 @@ const FAQ = () => {
                 />
             </motion.div>
 
-            <Accordion.Root type="single" defaultValue="item-1" collapsible className='mt-[5rem] xl:max-w-[70%] mx-auto flex flex-col gap-3'>
+            <Accordion.Root type="single" defaultValue="item-1" collapsible className='mt-8 xl:mt-[5rem] xl:max-w-[70%] mx-auto flex flex-col gap-3'>
                 {
                     lists.map((list, i) => (
 

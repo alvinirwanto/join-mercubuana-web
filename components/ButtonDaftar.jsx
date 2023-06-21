@@ -6,7 +6,7 @@ import Image from 'next/image';
 export default function ButtonDaftar() {
     return (
 
-        <div className='relative my-[15rem]'>
+        <div className='relative my-0 xl:my-[15rem]'>
             <Link
                 to='home'
                 activeClass='active'
@@ -22,7 +22,7 @@ export default function ButtonDaftar() {
                 src={'/campus-2.png'}
                 width={1000}
                 height={1000}
-                className='object-cover w-full h-[60vh] px-9 rounded-md overflow-clip'
+                className='object-cover w-full h-[50vh] xl:h-[60vh] px-4 xl:px-9 rounded-md overflow-clip'
             />
         </div>
     )

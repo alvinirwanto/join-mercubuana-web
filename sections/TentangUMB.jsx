@@ -159,7 +159,6 @@ const TentangUMB = () => {
                 </motion.div>
 
                 <Swiper
-
                     //Use slidesPerView auto and loopedSlides to avoid hydration error
                     slidesPerView="auto"
                     spaceBetween={10}

@@ -60,7 +60,7 @@ const MengapaMemilihKK = () => {
                 variants={staggerAnimation}
                 initial='hidden'
                 whileInView='show'
-                className="primary-padding pt-[5rem] grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-4 gap-y-8"
+                className="primary-padding pt-[5rem] grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-4 gap-y-2 xl:gap-y-8"
             >
                 {
                     listReasonKK.map((reason, i) => (
