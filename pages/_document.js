@@ -17,6 +17,23 @@ export default function Document() {
                         `,
                     }}
                 />
+
+                <script
+                    async
+                    src="https://www.googletagmanager.com/gtag/js?id=G-ZWMEZ08HRE"
+                />
+                <script
+                    dangerouslySetInnerHTML={{
+                        __html: `
+                            window.dataLayer = window.dataLayer || [];
+                            function gtag(){
+                                dataLayer.push(arguments);
+                            }
+                            gtag('js', new Date());
+                            gtag('config', 'G-ZWMEZ08HRE');
+                        `,
+                    }}
+                />
             </Head>
             <body>
                 <noscript
