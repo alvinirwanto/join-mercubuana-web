@@ -21,9 +21,9 @@ const items = [
     },
     {
         id: 2,
-        image: 'hero-2.jpg',
-        image_md: 'hero-2.jpg',
-        image_sm: 'hero-2.jpg'
+        image: 'banner-2.jpg',
+        image_md: 'banner-2.jpg',
+        image_sm: 'banner-2.jpg'
     },
     {
         id: 3,
