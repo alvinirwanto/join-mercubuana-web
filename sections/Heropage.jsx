@@ -107,7 +107,7 @@ const Heropage = () => {
                                 </p>
                                 <iframe
                                     height="1000"
-                                    className='max-h-[21rem] scale-[.99]'
+                                    className='max-h-[21rem] scale-[.90]'
                                     title='form daftar'
                                     src="https://omni.mercubuana.ac.id/crm-mx/crm-app/forms/wtl/77e6c3eac6ff3a5bf2b9ae14c5a4872c"
                                     frameBorder="0"
