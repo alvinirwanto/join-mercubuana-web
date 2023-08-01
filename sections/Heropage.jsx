@@ -95,7 +95,7 @@ const Heropage = () => {
 
                 <div className='hidden md:block'>
                     <div className='absolute bottom-[3rem] md:right-10 xl:top-[7rem] xl:right-[5rem] w-[95vw] md:max-w-[70vw] xl:max-w-[38vw] z-[20]'>
-                        <div className='border-[1px] shadow-md rounded-lg p-8 xl:p-[3rem] bg-white flex flex-col gap-4'>
+                        <div className='border-[1px] shadow-md rounded-lg p-8 xl:px-[3rem] xl:pt-[3rem] bg-white flex flex-col gap-4'>
                             <div>
                                 <h1 className='text-lg md:text-xl font-medium text-primary-green'>Tingkatkan Karirmu Bersama <br /> Kelas Karyawan UMB</h1>
                                 <h2 className='text-4xl mt-2 font-bold text-primary-blue'>Daftar Sekarang Juga!</h2>
@@ -107,7 +107,7 @@ const Heropage = () => {
                                 </p>
                                 <iframe
                                     height="1000"
-                                    className='max-h-[21rem] scale-[.90]'
+                                    className='max-h-[20rem] mb-6'
                                     title='form daftar'
                                     src="https://omni.mercubuana.ac.id/crm-mx/crm-app/forms/wtl/77e6c3eac6ff3a5bf2b9ae14c5a4872c"
                                     frameBorder="0"
