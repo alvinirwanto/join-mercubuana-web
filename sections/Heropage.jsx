@@ -94,7 +94,7 @@ const Heropage = () => {
                 }
 
                 <div className='hidden md:block'>
-                    <div className='absolute bottom-[3rem] md:right-10 xl:top-[8rem] xl:right-[5rem] w-[95vw] md:max-w-[70vw] xl:max-w-[38vw] z-[20]'>
+                    <div className='absolute bottom-[3rem] md:right-10 xl:top-[7rem] xl:right-[5rem] w-[95vw] md:max-w-[70vw] xl:max-w-[38vw] z-[20]'>
                         <div className='border-[1px] shadow-md rounded-lg p-8 xl:p-[3rem] bg-white flex flex-col gap-4'>
                             <div>
                                 <h1 className='text-lg md:text-xl font-medium text-primary-green'>Tingkatkan Karirmu Bersama <br /> Kelas Karyawan UMB</h1>
@@ -106,8 +106,8 @@ const Heropage = () => {
                                     Isi Data Diri Kamu Disini dan Dapatkan Informasi serta cicilan biaya kuliah hingga 48 kali!
                                 </p>
                                 <iframe
-                                    height="850"
-                                    className='max-h-[21rem]'
+                                    height="1000"
+                                    className='max-h-[21rem] scale-[.99]'
                                     title='form daftar'
                                     src="https://omni.mercubuana.ac.id/crm-mx/crm-app/forms/wtl/77e6c3eac6ff3a5bf2b9ae14c5a4872c"
                                     frameBorder="0"
