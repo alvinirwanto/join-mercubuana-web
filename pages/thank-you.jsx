@@ -1,21 +1,12 @@
 import React from 'react'
-import Lottie from 'react-lottie';
-import animationData from '../public/lottie/success.json';
+
+import { LuCheckCircle2 } from 'react-icons/lu';
+
 import Link from 'next/link';
 import Head from 'next/head';
 
 export default function ThankYouPage() {
-    const defaultOptions = {
-        loop: true,
-        autoplay: true,
-        animationData: animationData,
-        rendererSettings: {
-            // preserveAspectRatio: "xMidYMid slice"
-        }
-    };
-
     return (
-
         <>
             <Head>
                 <title>Thank You</title>
@@ -26,14 +17,11 @@ export default function ThankYouPage() {
                 <meta name="keywords" content="join universitas mercu buana, umb, universitas terbaik jakarta, univ swasta, kampus swasta terbaik, pts akreditasi unggul, mahasiswa berprestasi, gabung umb, universitas mercu buana meruya, kelas keryawan" />
                 <link rel="icon" href="/logo/logo-umb.png" />
             </Head>
-            <div className='min-h-screen flex flex-col gap-4 justify-center items-center -mt-[3rem]'>
-                <Lottie
-                    options={defaultOptions}
-                    height={400}
-                    width={400}
-                />
 
-                <div className='-mt-[3rem] text-center'>
+            <div className='min-h-screen flex flex-col gap-4 justify-center items-center -mt-[3rem]'>
+                <LuCheckCircle2 className='text-green-400 text-9xl mb-9 animate-bounce' />
+
+                <div className='text-center'>
                     <h2 className='font-bold text-3xl mb-5'>Terima kasih telah mengisi Formulir Pendaftaran</h2>
                     <p>Silahkan menunggu informasi lebih lanjut</p>
 
