@@ -9,7 +9,7 @@ import { slideIn, staggerAnimation, staggerItems } from '../utils/motion'
 
 import dynamic from 'next/dynamic'
 
-const TitleSection = dynamic(() => import('../components/TitleSection'), {
+const TitleSection2 = dynamic(() => import('../components/TitleSection2'), {
     ssr: false
 })
 
@@ -23,9 +23,9 @@ const Fakultas = () => {
                 initial='hidden'
                 whileInView='show'
             >
-                <TitleSection
-                    subtitle='Fakultas & Program Studi'
-                    title='Universitas Mercu Buana'
+                <TitleSection2
+                    title='Fakultas & Program Studi'
+                    subtitle='Universitas Mercu Buana'
                 />
             </motion.div>
 

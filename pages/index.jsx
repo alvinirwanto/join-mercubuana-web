@@ -1,7 +1,4 @@
-import Head from "next/head";
 import dynamic from 'next/dynamic'
-
-import Navbar from "../components/Navbar";
 import Heropage from "../sections/Heropage";
 import { useEffect, useState } from "react";
 
@@ -34,10 +31,6 @@ const FAQ = dynamic(() => import('../sections/FAQ'), {
     ssr: false
 })
 
-const MengapaMemilihUMB = dynamic(() => import('../sections/MengapaMemilihUMB'), {
-    ssr: false
-})
-
 const Fakultas = dynamic(() => import('../sections/Fakultas'), {
     ssr: false
 })
@@ -49,6 +42,7 @@ const Footer = dynamic(() => import('../components/Footer'), {
 
 import { ProgressBar } from 'react-loader-spinner'
 import ButtonDaftar from "../components/ButtonDaftar";
+import Layout from '../components/Layout';
 
 export default function Home() {
 
@@ -63,16 +57,6 @@ export default function Home() {
 
     return (
         <>
-            <Head>
-                <title>Gabung UMB</title>
-                <meta
-                    name="description"
-                    content='Universitas Mercu Buana, Pilihan Terbaik PTS di Indonesia. Daftarkan Diri Anda di Sini dan Dapatkan Informasi serta cicilan biaya kuliah hingga 48 kali!'
-                />
-                <meta name="keywords" content="join universitas mercu buana, umb, universitas terbaik jakarta, univ swasta, kampus swasta terbaik, pts akreditasi unggul, mahasiswa berprestasi, gabung umb, universitas mercu buana meruya, kelas keryawan" />
-                <link rel="icon" href="/logo/logo-umb.png" />
-            </Head>
-
             {
                 isLoading
                     ? <div className="flex justify-center items-center w-full h-screen">
@@ -87,26 +71,23 @@ export default function Home() {
                         />
                     </div>
 
-                    : <div>
-                        <Navbar />
+                    :
 
-                        <main>
-                            <Heropage />
-                            <SelamatDatang />
-                            <MengapaMemilihKK />
-                            <UnduhBrosur />
-                            <TentangUMB />
-                            <Fakultas />
-                            <ButtonDaftar />
-                            {/* <MengapaMemilihUMB /> */}
-                            <Review />
-                            <AlurPenerimaan />
-                            <ButtonDaftar />
-                            <FAQ />
-                        </main>
-
-                        <Footer />
-                    </div>
+                    <Layout
+                        title='Home'
+                    >
+                        <Heropage />
+                        <SelamatDatang />
+                        <MengapaMemilihKK />
+                        <UnduhBrosur />
+                        <TentangUMB />
+                        <Fakultas />
+                        <ButtonDaftar />
+                        <Review />
+                        <AlurPenerimaan />
+                        <ButtonDaftar />
+                        <FAQ />
+                    </Layout>
             }
         </>
     );

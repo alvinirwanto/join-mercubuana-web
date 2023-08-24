@@ -11,7 +11,7 @@ import dynamic from 'next/dynamic'
 import { TbReportMoney, TbAward, TbClockHour4, TbUserCheck, TbBuildingCommunity } from 'react-icons/tb'
 import { MdOutlinePrecisionManufacturing } from 'react-icons/md'
 
-const TitleSection = dynamic(() => import('../components/TitleSection'), {
+const TitleSection2 = dynamic(() => import('../components/TitleSection2'), {
     ssr: false
 })
 
@@ -50,9 +50,9 @@ const MengapaMemilihKK = () => {
                 initial='hidden'
                 whileInView='show'
             >
-                <TitleSection
-                    subtitle='Mengapa Memilih Kelas Karyawan'
-                    title='Universitas Mercu Buana'
+                <TitleSection2
+                    title='Mengapa Memilih Kelas Karyawan'
+                    subtitle='Universitas Mercu Buana'
                 />
             </motion.div>
 
