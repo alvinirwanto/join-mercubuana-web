@@ -1,6 +1,7 @@
 import React from 'react'
 
 import { LuCheckCircle2 } from 'react-icons/lu';
+import { BsWhatsapp } from 'react-icons/bs'
 
 import Link from 'next/link';
 import Head from 'next/head';
@@ -22,8 +23,8 @@ export default function ThankYouPage() {
                 <LuCheckCircle2 className='text-green-400 text-9xl mb-9 animate-bounce' />
 
                 <div className='text-center'>
-                    <h2 className='font-bold text-3xl mb-5'>Terima kasih telah mengisi Formulir Pendaftaran</h2>
-                    <p>Silahkan menunggu informasi lebih lanjut</p>
+                    <h2 className='font-bold text-3xl mb-5'>Terima kasih telah mengisi data diri kamu!</h2>
+                    <p>Mohon menunggu, tim kami akan segera menghubungi kakak.</p>
 
                     <p>Jika ada pertanyaan lebih lanjut, silahkan menghubungi WhatsApp Kami di bawah ini</p>
                 </div>
@@ -39,9 +40,10 @@ export default function ThankYouPage() {
                     <Link
                         href='https://wa.me/6281513113331'
                         target='_blank'
-                        className='bg-[#00326f] hover:bg-[#23C467] duration-200 text-white px-6 py-3 rounded font-semibold'
+                        className='bg-[#23C467] hover:bg-[#30a35e] duration-200 text-white px-6 py-3 flex justify-center items-center gap-3 rounded font-semibold'
                     >
-                        Hubungi Kami
+                        <BsWhatsapp className='text-white text-xl' />
+                        <span>Hubungi Kami</span>
                     </Link>
                 </div>
             </div>
