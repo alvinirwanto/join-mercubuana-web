@@ -17,6 +17,24 @@ export default function ThankYouPage() {
                 />
                 <meta name="keywords" content="join universitas mercu buana, umb, universitas terbaik jakarta, univ swasta, kampus swasta terbaik, pts akreditasi unggul, mahasiswa berprestasi, gabung umb, universitas mercu buana meruya, kelas keryawan" />
                 <link rel="icon" href="/logo/logo-umb.png" />
+
+                {/* <!-- Google tag (gtag.js) --> */}
+                <script
+                    async
+                    src="https://www.googletagmanager.com/gtag/js?id=G-ZWMEZ08HRE"
+                ></script>
+                <script
+                    dangerouslySetInnerHTML={{
+                        __html: `
+                            window.dataLayer = window.dataLayer || [];
+                            function gtag(){
+                                dataLayer.push(arguments);
+                            }
+                            gtag('js', new Date());
+                            gtag('config', 'G-ZWMEZ08HRE');
+                        `,
+                    }}
+                />
             </Head>
 
             <div className='min-h-screen flex flex-col gap-4 justify-center items-center -mt-[3rem]'>
