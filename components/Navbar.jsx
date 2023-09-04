@@ -34,6 +34,10 @@ const linkNav = [
         link: 'alur-penerimaan',
         title: 'Alur Penerimaan'
     },
+    // {
+    //     link: 'artikel',
+    //     title: 'Artikel'
+    // },
     {
         link: 'faq',
         title: 'FAQ'

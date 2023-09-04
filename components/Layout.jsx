@@ -3,16 +3,23 @@ import React from 'react'
 import Navbar from './Navbar'
 import Footer from './Footer'
 
-export default function Layout({ title, children }) {
+export default function Layout({ metaTitle, metaDescription, metaKeywords, metaImage, children }) {
     return (
         <html lang="en">
             <Head>
-                <title>{title}</title>
-                <meta
-                    name="description"
-                    content='Universitas Mercu Buana, Pilihan Terbaik PTS di Indonesia. Daftarkan Diri Anda di Sini dan Dapatkan Informasi serta cicilan biaya kuliah hingga 48 kali!'
-                />
-                <meta name="keywords" content="join universitas mercu buana, umb, universitas terbaik jakarta, univ swasta, kampus swasta terbaik, pts akreditasi unggul, mahasiswa berprestasi, gabung umb, universitas mercu buana meruya, kelas keryawan" />
+                <title>{metaTitle}</title>
+                <meta property='og:title' content={metaTitle} />
+                <meta name='twitter:title' content={metaTitle} />
+
+                <meta name="description" content={metaDescription} />
+                <meta property='og:description' content={metaDescription} />
+                <meta name='twitter:description' content={metaDescription} />
+
+                <meta name="keywords" content={metaKeywords} />
+
+                <meta property="og:image" content={metaImage} />
+                <meta name="twitter:image" content={metaImage} />
+
                 <link rel="icon" href="/logo/logo-umb.png" />
             </Head>
             <body>

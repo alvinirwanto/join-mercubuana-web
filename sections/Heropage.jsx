@@ -15,16 +15,16 @@ import { Pagination, Autoplay } from "swiper";
 const items = [
     {
         id: 1,
-        image: 'banner-1.png',
-        image_md: 'banner-1-md.png',
-        image_sm: 'banner-1-sm.png'
+        image: 'banner-gelombang-3-perpanjangan.jpg',
+        image_md: 'banner-gelombang-3-perpanjangan.jpg',
+        image_sm: 'banner-gelombang-3-perpanjangan.jpg'
     },
-    {
-        id: 2,
-        image: 'banner-2.jpg',
-        image_md: 'banner-2-md.jpg',
-        image_sm: 'banner-2-sm.jpg'
-    },
+    // {
+    //     id: 2,
+    //     image: 'banner-2.jpg',
+    //     image_md: 'banner-2-md.jpg',
+    //     image_sm: 'banner-2-sm.jpg'
+    // },
     {
         id: 3,
         image: 'hero-3.jpg',

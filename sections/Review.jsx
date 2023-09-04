@@ -116,7 +116,7 @@ const Review = () => {
                 <button
                 aria-label="button-prev"
                     onClick={fnPrev}
-                    className={`bg-black p-2 rounded-full shadow-lg ml-4 text-white`}
+                    className={`bg-primary-blue p-2 rounded-full shadow-lg ml-4 text-white`}
                 >
                     <RiArrowLeftSLine className='text-2xl' />
                 </button>
@@ -124,7 +124,7 @@ const Review = () => {
                 <button
                 aria-label="button-next"
                     onClick={fnNext}
-                    className={`bg-black p-2 rounded-full shadow-lg mr-2 text-white`}
+                    className={`bg-primary-blue p-2 rounded-full shadow-lg mr-2 text-white`}
                 >
                     <RiArrowRightSLine className='text-2xl' />
                 </button>

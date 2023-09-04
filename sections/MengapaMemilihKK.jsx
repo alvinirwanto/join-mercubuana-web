@@ -1,7 +1,5 @@
 import React from "react";
 
-import Image from "next/image";
-
 import { motion } from "framer-motion";
 import { slideIn, staggerAnimation, staggerItems } from "../utils/motion";
 
@@ -18,29 +16,35 @@ const TitleSection2 = dynamic(() => import('../components/TitleSection2'), {
 const listReasonKK = [
     {
         title: 'Terakreditasi BAN-PT',
-        content: 'Seluruh program studi unggulan di kelas karyawan Universitas Mercu Buana telah terakreditasi BAN-PT'
+        content: 'Seluruh program studi unggulan di kelas karyawan Universitas Mercu Buana telah terakreditasi BAN-PT',
+        icon: <TbAward size={50} />
     },
     {
         title: 'Biaya Kuliah Sesuai Kualitas',
-        content: 'Biaya perkuliahan sesuai dengan kualitas yang dirancang sama dengan program reguler dengan kemudahan skema pembayaran yang mudah'
+        content: 'Biaya perkuliahan sesuai dengan kualitas yang dirancang sama dengan program reguler dengan kemudahan skema pembayaran yang mudah',
+        icon: <TbReportMoney size={50} />
     },
     {
         title: 'Waktu Kuliah Fleksibel',
-        content: 'Di kelas karyawan, Anda dapat memilih waktu kuliah yang dapat disesuaikan dengan pekerjaan Anda'
+        content: 'Di kelas karyawan, Anda dapat memilih waktu kuliah yang dapat disesuaikan dengan pekerjaan Anda',
+        icon: <TbClockHour4 size={50} />
     },
     {
         title: 'Tenaga Pengajar Berkualitas',
-        content: 'Semua pengajar mempunyai akreditasi yang tinggi dan berpengalaman dibidangnya'
+        content: 'Semua pengajar mempunyai akreditasi yang tinggi dan berpengalaman dibidangnya',
+        icon: <TbUserCheck size={50} />
     },
     {
         title: 'Fasilitas Lengkap dan Nyaman',
-        content: 'Fasilitas diatur sehingga siswa dapat menikmati lingkungan dan hasil belajar terbaik'
+        content: 'Fasilitas diatur sehingga siswa dapat menikmati lingkungan dan hasil belajar terbaik',
+        icon: <TbBuildingCommunity size={50} />
     },
     {
         title: 'Relevan dengan Industri',
-        content: 'Ikuti program studi yang diperbarui secara rutin dengan kurikulum yang relevan dengan industri'
+        content: 'Ikuti program studi yang diperbarui secara rutin dengan kurikulum yang relevan dengan industri',
+        icon: <MdOutlinePrecisionManufacturing size={50} />
     },
-]
+];
 
 const MengapaMemilihKK = () => {
     return (
@@ -74,16 +78,7 @@ const MengapaMemilihKK = () => {
                             key={i} className="grid grid-cols-[1fr_5fr] gap-4 p-4"
                         >
                             <div className="text-primary-blue justify-self-end">
-                                {
-                                    i === 0 ? <TbAward size={50} />
-                                        : i === 1 ? <TbReportMoney size={50} />
-                                            : i === 2 ? <TbClockHour4 size={50} />
-                                                : i === 3 ? <TbUserCheck size={50} />
-                                                    : i === 4 ? <TbBuildingCommunity size={50} />
-                                                        : i === 5 ? <MdOutlinePrecisionManufacturing size={50} />
-                                                            : ''
-
-                                }
+                                {reason.icon}
                             </div>
                             <div className="flex flex-col gap-4 mt-2">
                                 <h2 className="font-semibold text-xl text-primary-blue">{reason.title}</h2>

@@ -22,6 +22,7 @@ export default function ButtonDaftar() {
                 src={'/campus-2.png'}
                 width={1000}
                 height={1000}
+                alt='umb'
                 className='object-cover w-full h-[50vh] xl:h-[60vh] px-4 xl:px-9 rounded-md overflow-clip'
             />
         </div>

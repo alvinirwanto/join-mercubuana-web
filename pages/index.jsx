@@ -43,7 +43,7 @@ const Footer = dynamic(() => import('../components/Footer'), {
 import { ProgressBar } from 'react-loader-spinner'
 import ButtonDaftar from "../components/ButtonDaftar";
 import Layout from '../components/Layout';
-
+import ArtikelSection from '../sections/ArtikelSection';
 export default function Home() {
 
     const [isLoading, setIsLoading] = useState(true);
@@ -74,7 +74,10 @@ export default function Home() {
                     :
 
                     <Layout
-                        title='Home'
+                        metaTitle='Home'
+                        metaDescription='Universitas Mercu Buana, Pilihan Terbaik PTS di Indonesia. Daftarkan Diri Anda di Sini dan Dapatkan Informasi serta cicilan biaya kuliah hingga 48 kali!'
+                        metaKeywords='join universitas mercu buana, umb, universitas terbaik jakarta, univ swasta, kampus swasta terbaik, pts akreditasi unggul, mahasiswa berprestasi, gabung umb, universitas mercu buana meruya, kelas keryawan'
+                        metaImage='/campus.png'
                     >
                         <Heropage />
                         <SelamatDatang />
@@ -86,6 +89,7 @@ export default function Home() {
                         <Review />
                         <AlurPenerimaan />
                         <ButtonDaftar />
+                        <ArtikelSection />
                         <FAQ />
                     </Layout>
             }

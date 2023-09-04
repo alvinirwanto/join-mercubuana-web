@@ -21,18 +21,21 @@ export default function SelamatDatang() {
                         src={'/selamat-datang/welcome-1.jpg'}
                         width={700}
                         height={700}
+                        alt='selamat datang'
                         className='h-[38vh] object-cover rounded-sm'
                     />
                     <Image
                         src={'/selamat-datang/welcome-2.jpg'}
                         width={700}
                         height={700}
+                        alt='selamat datang'
                         className='h-[38vh] object-cover rounded-sm'
                     />
                     <Image
                         src={'/selamat-datang/welcome-3.jpg'}
                         width={700}
                         height={700}
+                        alt='selamat datang'
                         className='h-[38vh] object-cover rounded-sm'
                     />
                 </div>
