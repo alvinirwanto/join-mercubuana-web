@@ -21,7 +21,7 @@ export default function ThankYouPage() {
                 {/* <!-- Google tag (gtag.js) --> */}
                 <script
                     async
-                    src="https://www.googletagmanager.com/gtag/js?id=G-ZWMEZ08HRE"
+                    src="https://www.googletagmanager.com/gtag/js?id=AW-949610150"
                 ></script>
                 <script
                     dangerouslySetInnerHTML={{
@@ -31,7 +31,8 @@ export default function ThankYouPage() {
                                 dataLayer.push(arguments);
                             }
                             gtag('js', new Date());
-                            gtag('config', 'G-ZWMEZ08HRE');
+                        
+                            gtag('config', 'AW-949610150');
                         `,
                     }}
                 />
