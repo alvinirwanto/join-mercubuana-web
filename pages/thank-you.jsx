@@ -19,7 +19,7 @@ export default function ThankYouPage() {
                 <link rel="icon" href="/logo/logo-umb.png" />
 
                 {/* <!-- Google tag (gtag.js) --> */}
-                {/* <script
+                <script
                     async
                     src="https://www.googletagmanager.com/gtag/js?id=AW-949610150"
                 ></script>
@@ -35,7 +35,7 @@ export default function ThankYouPage() {
                             gtag('config', 'AW-949610150');
                         `,
                     }}
-                /> */}
+                />
             </Head>
 
             <div className='min-h-screen flex flex-col gap-4 justify-center items-center -mt-[3rem]'>
